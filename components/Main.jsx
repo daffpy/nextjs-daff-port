@@ -16,7 +16,7 @@ const MainPage = () => {
                     </div>
                     <button className=" group flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[45px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
                         More about me
-                        <ArrIcon className='stroke-[1.5px] mt-[2px] ml-3 ease-in duration-200 group-hover:scale-x-[1.5] group-hover:ml-4' />
+                        <ArrIcon className='stroke-[1.5px] stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover:scale-x-[1.5] group-hover:ml-4' />
                     </button>
 
                 </div>
@@ -34,9 +34,6 @@ const MainPage = () => {
                             a python package functioning as a wrapper for VirtualYoutuber Fandom API
                         </div>
 
-
-                </div>
-                <div className="mb-[100px]">
 
                 </div>
             </div>

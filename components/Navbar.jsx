@@ -25,7 +25,7 @@ const Navbar = () => {
                     </div>
                     <div className="hidden md:flex mt-2 ml-20 text-[#b6b6b6]">
                         <ul>
-                            <Link href='/'>
+                            <Link href='/about'>
                                 <li className="mr-10 text-sm hover:line-through hover:text-white">About</li>
                             </Link>
                         </ul>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 </button>
                 <div>
                     <ul>
-                        <Link href='/'>
+                        <Link href='/about'>
                             <li className="py-6 mt-[100px] text-center text-lg hover:line-through hover:text-white hover:bg-white-100 hover:animate-pulse">About</li>
                         </Link>
                     </ul>
