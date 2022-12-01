@@ -47,7 +47,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={nav ? "md:hidden fixed right-0 top-0 w-[65%] sm:w-[50%] md:w-[45%] h-screen bg-black p-10 ease-in duration-300 opacity-[.9] font-[STUSSY]" : 'fixed right-[-100%] duration-400'}>
-                <button onClick={handleNav} className="group border px-4 py-1 rounded-tl-[90%] rounded-tr-[50%] rounded-br-[75%] rounded-bl-[50%]">
+                <button onClick={handleNav} className="group border px-4 py-1 rounded-tl-[90%] rounded-tr-[50%] rounded-br-[75%] rounded-bl-[50%] hover:animate-pulse">
                     <div className=" text-[24px] group-hover:line-through">
                         x
                     </div>
@@ -55,22 +55,29 @@ const Navbar = () => {
                 <div>
                     <ul>
                         <Link href='/'>
-                            <li className="py-6 mt-[100px] text-center text-lg hover:line-through hover:text-white hover:bg-white-100">About</li>
+                            <li className="py-6 mt-[100px] text-center text-lg hover:line-through hover:text-white hover:bg-white-100 hover:animate-pulse">About</li>
                         </Link>
                     </ul>
                     <ul>
                         <Link href='/'>
-                            <li className="py-6 text-lg hover:line-through text-center hover:text-white hover:bg-black">Works</li>
+                            <li className="py-6 text-lg hover:line-through text-center hover:text-white hover:bg-black hover:animate-pulse">Works</li>
                         </Link>
                     </ul>
                     <ul>
-                        <Link href='/'>
-                            <li className="py-6 text-lg hover:line-through text-center hover:text-white">Blog</li>
-                        </Link>
+                        <div>
+                            <Link href='/'>
+                                <li className="group py-6 text-lg hover:line-through text-center hover:text-white hover:animate-pulse">
+                                    Blog
+                                </li>
+                            </Link>
+                        </div>
                     </ul>
                 </div>
+                <div className="text-[10px] italic mt-20 text-center">
+                    "The closer you look, the less you will see"
+                </div>
                 <div className="bottom-10 absolute text-[#cbd5e0]">
-                    @daffxcx
+                    @DAFfXcx
                 </div>
             </div>
         </div>
