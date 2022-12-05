@@ -1,7 +1,6 @@
 import '../styles/globals.css'
+import '../styles/globals.scss'
 import localFont from '@next/font/local'
-
-const myFont = localFont({ src: './StussyScript-Regular.ttf' })
 
 function MyApp({ Component, pageProps }) {
   /*

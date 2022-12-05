@@ -2,9 +2,12 @@ import React,{useState} from "react";
 import Link from "next/link";
 import MyIcon from '../public/assets/icons/myIcon.jsx'
 import {AiOutlineMenu} from "react-icons/ai"
+import { useRouter } from "next/router";
 
 
 const Navbar = () => {
+    const router = useRouter()
+    const currentPath = router.pathname
     const [nav,setNav] = useState(false)
 
     const handleNav = () => {
@@ -15,29 +18,64 @@ const Navbar = () => {
             <div className="max-w-[700px] mx-auto mt-10 font-[STUSSY]">
                 
                 <div className="flex justify-between items-center w-full h-full">
-                    <div className="flex mt-1">
-                    <div className="ml-5 md:ml-0">
-                        <MyIcon fill="#ffffff" width='48' height='48'/>
-                    </div>
-                    <div className="text-xl mt-2.5 underline">
-                        dXcx
-                    </div>
-                    </div>
-                    <div className="hidden md:flex mt-2 ml-20 text-[#b6b6b6]">
+                    {currentPath === '/' ? (
+                        <div className="flex mt-1">
+                        <div className="ml-5 md:ml-0">
+                            <MyIcon fill="#ffffff" width='48' height='48'/>
+                        </div>
+                        <div className="text-xl mt-2.5 underline">
+                            dXcx
+                        </div>
+                        </div>
+                    ):(
+                        <Link href='/'>
+                        <div className="flex mt-1">
+                        <div className="ml-5 md:ml-0">
+                            <MyIcon fill="#ffffff" width='48' height='48'/>
+                        </div>
+                        <div className="text-xl mt-2.5 underline">
+                            dXcx
+                        </div>
+                        </div>
+                        </Link>
+
+                    )}
+                    <div className="hidden md:flex ml-20 text-[#b6b6b6]">
                         <ul>
-                            <Link href='/about'>
-                                <li className="mr-10 text-sm hover:line-through hover:text-white">About</li>
-                            </Link>
+                            {currentPath === '/about' ?(
+                                <span>
+                                    <li className="mr-10 text-sm line-through text-white">About</li>
+                                </span>
+
+                            ):(
+                                <Link href='/about'>
+                                    <li className="mr-10 text-sm hover:line-through hover:text-white">About</li>
+                                </Link>
+                            )}
                         </ul>
                         <ul>
-                            <Link href='/'>
-                                <li className="mr-10 text-sm hover:line-through hover:text-white">Works</li>
-                            </Link>
+                            {currentPath === '/works' ?(
+                                <span>
+                                    <li className="mr-10 text-sm line-through text-white">Works</li>
+                                </span>
+
+                            ):(
+                                <Link href='/works'>
+                                    <li className="mr-10 text-sm hover:line-through hover:text-white">Works</li>
+                                </Link>
+                            )}
                         </ul>
                         <ul>
-                            <Link href='/'>
-                                <li className=" text-sm hover:line-through hover:text-white hover:bg-red-900">Blog</li>
-                            </Link>
+                            {currentPath === '/blog' ?(
+                                <span>
+                                    <li className="mr-10 text-sm line-through text-white">Blog</li>
+                                </span>
+
+                            ):(
+                                <Link href='/blog'>
+                                    <li className=" text-sm hover:line-through hover:text-white ">Blog</li>
+                                </Link>
+                            )}
                         </ul>
                     </div>
                     <div onClick={handleNav} className={!nav ? "md:hidden mr-5": 'hidden'}>
@@ -46,7 +84,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={nav ? "md:hidden fixed right-0 top-0 w-[65%] sm:w-[50%] md:w-[45%] h-screen bg-black p-10 ease-in duration-300 opacity-[.9] font-[STUSSY]" : 'fixed right-[-100%] duration-400'}>
+            <div className={nav ? "md:hidden fixed right-0 top-0 w-[65%] sm:w-[50%] md:w-[45%] h-screen bg-black p-10 ease-in duration-300 opacity-[.9] font-[STUSSY] z-[2]" : 'fixed right-[-100%] duration-400'}>
                 <button onClick={handleNav} className="group border px-4 py-1 rounded-tl-[90%] rounded-tr-[50%] rounded-br-[75%] rounded-bl-[50%] hover:animate-pulse">
                     <div className=" text-[24px] group-hover:line-through">
                         x
@@ -73,10 +111,10 @@ const Navbar = () => {
                         </div>
                     </ul>
                 </div>
-                <div className="text-[10px] italic mt-20 text-center">
+                <div className="text-[10px] italic mt-20 text-center tracking-wide">
                     "The closer you look, the less you will see"
                 </div>
-                <div className="bottom-10 absolute text-[#cbd5e0]">
+                <div className="text-[#cbd5e0] mt-20">
                     @DAFfXcx
                 </div>
             </div>

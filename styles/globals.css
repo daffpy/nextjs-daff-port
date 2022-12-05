@@ -50,3 +50,12 @@ a {
   font-weight: 900;
 }
 */
+@layer components {
+  .img-static {
+    position: absolute;
+  }
+  
+  .img-static:hover {
+    opacity:0;
+  }
+}
