@@ -2,7 +2,6 @@ import React, {useReducer} from "react";
 import Image from "next/image";
 import OlliePicGif from "../public/assets/img/ollie1.gif"
 import OlliePic from "../public/assets/img/ollie1-static.png"
-import { Link } from "@nextui-org/react";
 import {FaTwitter, FaDiscord} from "react-icons/fa"
 
 

@@ -92,23 +92,40 @@ const Navbar = () => {
                 </button>
                 <div>
                     <ul>
-                        <Link href='/about'>
-                            <li className="py-6 mt-[100px] text-center text-lg hover:line-through hover:text-white hover:bg-white-100 hover:animate-pulse">About</li>
-                        </Link>
+                        {currentPath === '/about' ?(
+                                <span>
+                                    <li className="py-6 mt-[100px] text-center text-lg line-through text-white ">About</li>
+                                </span>
+
+                            ):(
+                                <Link href='/about'>
+                                    <li className="py-6 mt-[100px] text-center text-lg hover:line-through hover:text-white hover:animate-pulse">About</li>
+                                </Link>
+                            )}
                     </ul>
                     <ul>
-                        <Link href='/'>
-                            <li className="py-6 text-lg hover:line-through text-center hover:text-white hover:bg-black hover:animate-pulse">Works</li>
-                        </Link>
+                            {currentPath === '/works' ?(
+                                <span>
+                                    <li className="py-6  text-center text-lg line-through text-white">Works</li>
+                                </span>
+
+                            ):(
+                                <Link href='/works'>
+                                    <li className="py-6 text-center text-lg hover:line-through hover:text-white hover:animate-pulse">Works</li>
+                                </Link>
+                            )}
                     </ul>
                     <ul>
-                        <div>
-                            <Link href='/'>
-                                <li className="group py-6 text-lg hover:line-through text-center hover:text-white hover:animate-pulse">
-                                    Blog
-                                </li>
-                            </Link>
-                        </div>
+                            {currentPath === '/blog' ?(
+                                <span>
+                                    <li className="py-6  text-center text-lg line-through text-white">Blog</li>
+                                </span>
+
+                            ):(
+                                <Link href='/blog'>
+                                    <li className="py-6 text-center text-lg hover:line-through hover:text-white hover:animate-pulse">Blog</li>
+                                </Link>
+                            )}
                     </ul>
                 </div>
                 <div className="text-[10px] italic mt-20 text-center tracking-wide">
