@@ -6,11 +6,16 @@
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: background .5s;
+    
     &--ul {
-      background-image: linear-gradient(to right, black 0, black 100%);
+      background-position: 0 1.15em;
+      background-image: linear-gradient(to right, #e60067 0, #e60067 100%);
     }
     &--text {
       background-position: 0 0.1em;
+    }
+    &--textmini {
+      background-position: 0 -0.1em;
     }
     &--mark {
       background-position: 0 -0.2em;

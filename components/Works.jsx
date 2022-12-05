@@ -12,7 +12,7 @@ const WorkPage = () => {
                     <div className="font-space text-[22px]">
                         <p><a className="marker marker--text group-hover/cont:bg-[length:100%_100%]">Wanted to know more about <span className="font-bold">my coding projects </span>?</a></p>
                     </div>
-                    <Link href="/about">
+                    <Link href="/works/code">
                     <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
                         <BsCodeSquare className=" stroke-[#1d1d1e] mt-[3.5px] mr-2"/>
                         More about my coding projects
