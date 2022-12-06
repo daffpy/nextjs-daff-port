@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Tooltip } from "@nextui-org/react";
 import Tracks from "../components/TopTrack.jsx";
 import Avatar from "../components/GetProfile.jsx";
@@ -15,7 +14,7 @@ const AboutPage = () => {
             <div className="mx-6">
                 <div className="mt-[110px] text-[44px] font-htiny text-left">
                     <Avatar/>
-                    <div className="mt-8 underline">
+                    <div className="mt-8  font-outfit font-bold tracking-wide">
                         About me
                     </div>   
                     <div className="font-space text-[14px] text-[#cbd5e0]">
@@ -26,7 +25,7 @@ const AboutPage = () => {
                             I'm very interested in game development, machine learning and competitive programming. I also love doing pixel art that are mainly based on Vtubers.
                         </p>
                     </div>
-                    <div className="mt-[65px] text-[36px] font-htiny text-left underline">
+                    <div className="mt-[65px] text-[32px] text-left underline underline-offset-4 font-outfit font-bold tracking-wide">
                         Knowledgebase
                     </div>
                     <div >
@@ -99,7 +98,7 @@ const AboutPage = () => {
                             </Tooltip>
                         </div>
                     </div>
-                    <div className="mt-[65px] text-[36px] font-htiny text-left underline">
+                    <div className="mt-[65px] text-[32px] text-left underline underline-offset-4 font-outfit font-bold tracking-wide">
                         Music taste
                     </div>
                     <div>

@@ -21,9 +21,9 @@ const Home = ({ posts }) => {
                     {posts.map((post, index) => (
                     <div key={index} className='group p-6 rounded-xl tracking-wider'>
                     <Link href={'/blog/' + post.slug} passHref key={post.slug}>
-                        <div key={post.readTime + Math.random()}className='font-light text-md p-[2px] text-[#cbd5e0]'>{post.readTime}</div>
+                        <div key={post.readTime + Math.random()}className='font-light text-[15px] p-[2px] text-[#cbd5e0]'>{post.readTime}</div>
                         <div key={post.frontMatter.title} className='font-bold text-[22px] p-[2px] group-hover:bg-[length:100%_100%] marker marker--text inline-block'>{post.frontMatter.title}</div>
-                        <div key={post.frontMatter.description} className='font-light text-[17px] text-[#cbd5e0] p-[2px] '>{post.frontMatter.description}</div>
+                        <div key={post.frontMatter.description} className='font-light font-space text-[16px] text-[#cbd5e0] p-[2px] '>{post.frontMatter.description}</div>
                     </Link>
                     </div>
                     ))}
