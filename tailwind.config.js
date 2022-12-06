@@ -11,6 +11,7 @@ module.exports = {
         stussy: ['STUSSY', 'cursive'],
         gaegu:['Gaegu',"cursive"],
         htiny:['HEYTINY',"cursive"],
+        outfit:['Outfit', 'sans-serif']
       }
     },
   },

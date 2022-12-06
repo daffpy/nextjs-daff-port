@@ -33,7 +33,7 @@ a {
   }
   body {
     color: white;
-    background: #1d1d1e;
+    background: #0E1116;
   }
 }
 .containers{
@@ -58,4 +58,35 @@ a {
   .img-static:hover {
     opacity:0;
   }
+}
+@layer base {
+  main h1 {
+    @apply font-bold text-5xl md:text-7xl;
+  }
+
+  main h2 {
+    @apply  text-2xl font-light tracking-wide;
+  }
+
+  main h3 {
+    @apply text-lg font-bold md:text-2xl;
+  }
+  main h4 {
+    @apply text-base font-light tracking-wide;
+  }
+  main p{
+    @apply text-lg md:text-xl font-light tracking-wide leading-relaxed;
+  }
+  main blockquote{
+    @apply italic text-lg md:text-xl font-light tracking-wide p-4 my-4 bg-gray-50 border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-800;
+  }
+  main ol{
+    @apply list-disc list-inside p-4 text-base md:text-lg font-light tracking-wide space-y-4;
+  }
+}
+main span.whisper{
+  color: #cbd5e0;
+}
+main span.segment{
+  color: #FDE047;
 }
