@@ -38,6 +38,9 @@ const MainPage = () => {
 
 
                 </div>
+                <div className="pb-[150px]">
+
+                </div>
             </div>
         </div>
     )

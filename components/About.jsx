@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/react";
 import Tracks from "../components/TopTrack.jsx";
+import Avatar from "../components/GetProfile.jsx";
 import { HTMLIcon, CSSIcon, SFIcon, 
     JSIcon, PYIcon, CPPIcon, 
     LuaIcon, AseIcon, PSIcon,
@@ -13,12 +14,7 @@ const AboutPage = () => {
         <div className="max-w-[550px] mx-auto mt-10">
             <div className="mx-6">
                 <div className="mt-[110px] text-[44px] font-htiny text-left">
-                    <Image src='https://cdn.discordapp.com/avatars/820569882860716072/30cab11ef285365e6b922bd185b51444.png?size=4096'
-                            width={100}
-                            height={100}
-                            className='rounded-full'
-                            alt='urmom'
-                    />
+                    <Avatar/>
                     <div className="mt-8 underline">
                         About me
                     </div>   
