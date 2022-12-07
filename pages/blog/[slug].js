@@ -24,13 +24,19 @@ const PostPage = ({ frontMatter: { title, date, description, tags }, mdxSource, 
             <link rel="icon" href="/icon2.png" />
         </Head>
         <Navbar/>
-        <div className="max-w-[800px] mx-auto mt-[100px]">
+        <div className="max-w-[800px] mx-auto mt-[95px]">
             <div className="mx-6 font-outfit">
             <main>
                 <div className='border-b border-b-slate-800 pb-10'>
+                    <div className='flex py-4 gap-x-3 tracking-wide font-light items-center'>
+                        <p className='text-slate-400 text-base'>{date}</p>
+                        <p>•</p>
+                        <p className='text-[#e60067] text-base'>{readTime}</p>
+                    </div>
                     <h1 className='font-bold pb-6'>{title}</h1>
-                    <h2 className='text-[#cbd5e0]'>{description}</h2>
-                    <h3 className='flex gap-x-3 mt-10 text-yellow-300 justify-between'><div className='flex gap-x-3'>{tags.map((tag, key) => <p className='text-base font-light tracking-wide' key={key}>{tag}</p>)}</div><p className='text-[#e60067] text-base tracking-wide font-light'>{readTime}</p>
+                    <h2 className='text-slate-400'>{description}</h2>
+                    <h3 className='flex gap-x-3 mt-10 text-yellow-300 justify-between'>
+                        <div className='flex gap-x-3'>{tags.map((tag, key) => <p className='text-base font-light tracking-wide' key={key}>{tag}</p>)}</div>
                     </h3>
                 </div>
                 <div className='font-light py-10'>
