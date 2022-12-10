@@ -14,7 +14,7 @@ import { Superchat, HugeQuote, BImage, WhatsappContainer, Whatsapp } from '../..
 const components = {Image, BImage, Superchat, HugeQuote, WhatsappContainer, Whatsapp}
 
 
-const PostPage = ({ frontMatter: { title, date, description, tags },slug, mdxSource, readTime}) => {
+const PostPage = ({ frontMatter: { title, ddate, description, tags },slug, mdxSource, readTime}) => {
   return (
     <div>
         <Head>
@@ -28,7 +28,7 @@ const PostPage = ({ frontMatter: { title, date, description, tags },slug, mdxSou
             <main>
                 <div className='border-b border-b-slate-800 pb-10'>
                     <div className='flex py-4 gap-x-3 tracking-wide font-light items-center'>
-                        <p className='text-slate-400 text-base'>{date}</p>
+                        <p className='text-slate-400 text-base'>{ddate}</p>
                         <p>•</p>
                         <p className='text-[#e60067] text-base'>{readTime}</p>
                     </div>
