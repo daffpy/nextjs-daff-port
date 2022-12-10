@@ -107,7 +107,7 @@ const AboutPage = () => {
                                 Wondering what kinds of music im into?
                             </p>
                             <p>
-                                Here's a few of my favorite songs that i've played a lot:
+                                Here's a few of my favorite songs that i've played a lot this month:
                             </p>
                         </div>
                     </div>

@@ -13,7 +13,7 @@ export default function Avatar() {
     return (
         <>
         {
-            <Profile {...[data.data.discord_user.avatar]}/>
+            <Profile url={data.data.discord_user.avatar} />
         }
         </>
     );

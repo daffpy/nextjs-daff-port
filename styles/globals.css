@@ -51,6 +51,32 @@ a {
 }
 */
 @layer components {
+  .WAText{
+    @apply text-white max-w-[200px] md:max-w-[300px] font-sans font-normal tracking-normal leading-5  text-[12px] md:text-sm break-words pr-[8px] md:pr-[12px] pb-[1px]
+  }
+  .WATime{
+    @apply text-gray-400 text-[10px] leading-4 md:text-xs font-sans font-normal tracking-normal justify-self-end self-end
+  }
+  .WACont{
+    @apply items-center grid grid-cols-whatsapp max-w-[350px] bg-[#252D32] min-h-[40px] pl-3 pr-2 py-[6px] text-[13px] md:text-[14px] rounded-r-xl rounded-bl-xl
+  }
+  .WACont2{
+    @apply max-w-[250px] md:max-w-[280px] bg-[#252D32] min-h-[40px] rounded-r-xl rounded-bl-xl shrink flex items-center justify-between py-[6px] pl-3 pr-2
+
+  }
+  .WAContMe{
+    @apply items-center grid grid-cols-whatsapp max-w-[350px] bg-[#075E54] min-h-[40px] pl-3 pr-2 py-[6px] text-[13px] md:text-[14px] rounded-l-xl rounded-br-xl
+
+  }
+  .chatTriangle{
+    @apply w-0 h-0 border-[4px] border-solid border-transparent border-r-[#252D32] border-t-[#252D32]; 
+  }
+  .chatTriangleMe{
+    @apply w-0 h-0 border-[4px] border-solid border-transparent border-r-[#075E54] border-t-[#075E54]; 
+  }
+  .triangle { 
+    @apply w-0 h-0 border-[4px] border-solid border-transparent; 
+  }
   .img-static {
     position: absolute;
   }
@@ -58,6 +84,9 @@ a {
   .img-static:hover {
     opacity:0;
   }
+  .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+
+  .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 }
 @layer base {
   main h1 {
@@ -65,23 +94,23 @@ a {
   }
 
   main h2 {
-    @apply  text-2xl font-light tracking-wide;
+    @apply  text-2xl  font-light tracking-wide;
   }
 
   main h3 {
-    @apply text-lg font-bold md:text-2xl;
+    @apply text-3xl md:text-[32px] font-normal tracking-wide ;
   }
   main h4 {
     @apply text-base font-light tracking-wide;
   }
   main p{
-    @apply text-lg md:text-xl font-light tracking-wide leading-relaxed;
+    @apply text-lg md:text-[21px] font-light tracking-wider leading-[2.1];
   }
   main blockquote{
     @apply italic text-lg md:text-xl font-light tracking-wide p-4 my-4 bg-gray-50 border-l-4 border-gray-300 dark:border-gray-500 dark:bg-gray-800;
   }
   main ol{
-    @apply list-disc list-inside p-4 text-base md:text-lg font-light tracking-wide space-y-4;
+    @apply list-disc list-inside p-4 text-base md:text-lg font-light tracking-wider space-y-4;
   }
 }
 main span.whisper{
@@ -90,3 +119,12 @@ main span.whisper{
 main span.segment{
   color: #FDE047;
 }
+main span.terms{
+  @apply text-[#e60067] font-caveat leading-[1.5] text-[26px] md:text-[29px]
+}
+
+.wa-bg{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.85)), url("https://raw.githubusercontent.com/Xetera/xetera.dev/master/content/assets/whatsapp_background.png");
+
+}
+

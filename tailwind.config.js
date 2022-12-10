@@ -9,9 +9,13 @@ module.exports = {
       fontFamily: {
         space: ['Space Grotesk', 'sans-serif'],
         stussy: ['STUSSY', 'cursive'],
-        gaegu:['Gaegu',"cursive"],
         htiny:['HEYTINY',"cursive"],
-        outfit:['Outfit', 'sans-serif']
+        outfit:['Outfit', 'sans-serif'],
+        caveat:['Caveat', 'cursive']
+
+      },
+      gridTemplateColumns:{
+        'whatsapp':'fit-content(1000px) auto;'
       }
     },
   },

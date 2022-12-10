@@ -1,12 +1,13 @@
 import Image from "next/image";
 
-export default function Profile(url) {
+
+export default function Profile(data) {
 
     return (
-        <Image src={!url ? "/assets/img/pp-placeholder.jpg":`https://cdn.discordapp.com/avatars/820569882860716072/${url[0]}.webp?size=512`} 
+        <Image src={!data ? "https://api.lanyard.rest/820569882860716072.webp":`https://cdn.discordapp.com/avatars/820569882860716072/${data.url}.webp?size=512`} 
         width={100}
         height={100}
         className='rounded-full'
-        alt='urmom'/>
+        alt='urmom' />
     );
   }

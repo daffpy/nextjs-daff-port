@@ -15,8 +15,7 @@ const Navbar = () => {
     }
     return(
         <div>
-            <div className="max-w-[700px] mx-auto mt-10 font-[STUSSY]">
-                
+            <div className="max-w-[700px] mx-auto mt-10 font-[STUSSY]">                
                 <div className="flex justify-between items-center w-full h-full">
                     {currentPath === '/' ? (
                         <div className="flex mt-1">
