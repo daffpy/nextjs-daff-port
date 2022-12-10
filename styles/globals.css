@@ -92,6 +92,9 @@ a {
   main h1 {
     @apply font-bold text-5xl md:text-7xl;
   }
+  iframe{
+    @apply w-full h-full aspect-video;
+  }
 
   main h2 {
     @apply  text-2xl  font-light tracking-wide;
