@@ -51,9 +51,9 @@ const PostPage = ({ frontMatter: { title, ddate, description, tags },slug, mdxSo
 const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join('public','posts'))
 
-  const paths = files.map(filename => ({ filename, time:fs.statSync(`public/posts/${filename}`).mtime.getTime()})).sort(((a, b) => (a.time - b.time))).map(f=> ({
+  const paths = files.map(filename => ({
     params: {
-        slug: f.filename
+        slug: filename
       }
   })) 
 
