@@ -15,11 +15,11 @@ const Navbar = () => {
     }
     return(
         <div>
-            <div className="max-w-[700px] mx-auto mt-10 font-[STUSSY]">                
-                <div className="flex justify-between items-center w-full h-full">
+            <div className="max-w-[800px] mx-auto mt-10 font-[STUSSY]">                
+                <div className="pl-4 flex justify-between items-center w-full h-full">
                     {currentPath === '/' ? (
                         <div className="flex mt-1">
-                        <div className="ml-5 md:ml-0">
+                        <div className="ml-0">
                             <MyIcon fill="#ffffff" width='48' height='48'/>
                         </div>
                         <div className="text-xl mt-2.5 underline">
@@ -39,7 +39,7 @@ const Navbar = () => {
                         </Link>
 
                     )}
-                    <div className="hidden md:flex ml-20 text-[#b6b6b6]">
+                    <div className="hidden md:flex ml-20 pr-5 text-[#b6b6b6]">
                         <ul>
                             {currentPath === '/about' ?(
                                 <span>
