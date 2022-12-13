@@ -23,7 +23,7 @@ const PostPage = ({ frontMatter: { title, ddate, description, tags },slug, mdxSo
             <link rel="icon" href="/icon2.png" />
         </Head>
         <Navbar/>
-        <div className="max-w-[800px] mx-auto mt-[95px]">
+        <div className="max-w-[800px] mx-auto mt-[130px]">
             <div className="mx-6 font-outfit">
             <main>
                 <div className='border-b border-b-slate-800 pb-10'>

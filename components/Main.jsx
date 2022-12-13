@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import Home from "../pages/blog/index";
 import ArrIcon from "../public/assets/icons/rBtnIcon";
 
 const MainPage = () => {
     return(
-        <div className="max-w-[550px] mx-auto mt-10">
+        <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6">
                 <div className="mt-[110px] text-[44px] font-outfit font-bold tracking-wide text-left">
                     Hi, my name is <span className="">Daffa</span>.

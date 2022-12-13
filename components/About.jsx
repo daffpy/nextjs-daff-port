@@ -10,7 +10,7 @@ import { HTMLIcon, CSSIcon, SFIcon,
 
 const AboutPage = () => {
     return(
-        <div className="max-w-[550px] mx-auto mt-10">
+        <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6">
                 <div className="mt-[110px] text-[44px] font-htiny text-left">
                     <Avatar/>

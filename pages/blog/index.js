@@ -28,7 +28,7 @@ const Home = ({ allPostsData}) => {
         <link rel="icon" href="/icon2.png" />
         </Head>
         <Navbar/>
-        <div className="max-w-[600px] mx-auto mt-10">
+        <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6 font-outfit">
                 <div className="mt-[110px] text-left">
                     {allPostsData.map((post, index) => (

@@ -15,11 +15,11 @@ const Navbar = () => {
     }
     return(
         <div>
-            <div className="max-w-[800px] md:w-[800px] mx-auto mt-10 font-[STUSSY]">                
-                <div className="pl-2 md:pl-4 flex justify-between items-center w-full h-full">
+            <div className={"max-w-[800px] md:w-[800px] fixed top-0 inset-x-0 mx-auto pt-5 pb-1 font-[STUSSY]" + (!nav ? " backdrop-blur-[4px] bg-[#0E1116]/50 z-[9999]": '')}>                
+                <div className="pl-2 md:pl-4 flex justify-between items-center">
                     {currentPath === '/' ? (
                         <div className="flex mt-1">
-                        <div className="ml-0">
+                        <div className="ml-2 md:ml-0">
                             <MyIcon fill="#ffffff" width='48' height='48'/>
                         </div>
                         <div className="text-xl mt-2.5 underline">
@@ -29,7 +29,7 @@ const Navbar = () => {
                     ):(
                         <Link href='/'>
                         <div className="flex mt-1">
-                        <div className="ml-5 md:ml-0">
+                        <div className="ml-2 md:ml-0">
                             <MyIcon fill="#ffffff" width='48' height='48'/>
                         </div>
                         <div className="text-xl mt-2.5 underline">
@@ -39,48 +39,55 @@ const Navbar = () => {
                         </Link>
 
                     )}
-                    <div className="hidden md:flex ml-20 pr-10 text-[#b6b6b6]">
+                    <div className={" hidden ml-20 pr-10 text-slate-100" + (currentPath != '/blog/[slug]' ? " md:flex":'')}>
                         <ul>
                             {currentPath === '/about' ?(
                                 <span>
-                                    <li className="mr-10 text-sm line-through text-white">About</li>
+                                    <div className="mr-10 mt-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
+                                    <li className="text-sm relative text-white">About</li></div>
                                 </span>
 
                             ):(
                                 <Link href='/about'>
-                                    <li className="mr-10 text-sm hover:line-through hover:text-white">About</li>
+                                    <li className="mr-10 text-sm hover:bg-[length:100%_100%] p-2 marker marker--mark ">About</li>
                                 </Link>
                             )}
                         </ul>
                         <ul>
                             {currentPath === '/works' ?(
                                 <span>
-                                    <li className="mr-10 text-sm line-through text-white">Works</li>
+                                    <div className="mr-10 mt-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
+                                    <li className="relative text-sm text-white">Works</li></div>
                                 </span>
 
                             ):(
                                 <Link href='/works'>
-                                    <li className="mr-10 text-sm hover:line-through hover:text-white">Works</li>
+                                    <li className="mr-10 text-sm hover:bg-[length:100%_100%] p-2 marker marker--mark ">Works</li>
                                 </Link>
                             )}
                         </ul>
                         <ul>
                             {currentPath === '/blog' ?(
                                 <span>
-                                    <li className="mr-10 text-sm line-through text-white">Blog</li>
+                                    <div className="mr-10 mt-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
+                                    <li className="relative text-sm text-white">Blog</li></div>
                                 </span>
 
                             ):(
                                 <Link href='/blog'>
-                                    <li className=" text-sm hover:line-through hover:text-white ">Blog</li>
+                                    <li className="mr-10 text-sm hover:bg-[length:100%_100%] p-2 marker marker--mark ">Blog</li>
                                 </Link>
                             )}
                         </ul>
                     </div>
-                    <div onClick={handleNav} className={!nav ? "md:hidden mr-5": 'hidden'}>
-                        <AiOutlineMenu size={25}/>
+                    {currentPath != '/blog/[slug]'?
+                    (
+                        <div onClick={handleNav} className={(!nav ? "md:hidden mr-5": 'hidden')}>
+                            <AiOutlineMenu size={25}/>
 
-                    </div>
+                        </div>
+
+                    ):('')}
                 </div>
             </div>
             <div className={nav ? "md:hidden fixed right-0 top-0 w-[65%] sm:w-[50%] md:w-[45%] h-screen bg-black p-10 ease-in duration-300 opacity-[.9] font-[STUSSY] z-[2]" : 'fixed right-[-100%] duration-400'}>
@@ -127,10 +134,7 @@ const Navbar = () => {
                             )}
                     </ul>
                 </div>
-                <div className="text-[10px] italic mt-20 text-center tracking-wide">
-                    "The closer you look, the less you will see"
-                </div>
-                <div className="text-[#cbd5e0] mt-20">
+                <div className="text-[#cbd5e0] absolute bottom-10">
                     @DAFfXcx
                 </div>
             </div>

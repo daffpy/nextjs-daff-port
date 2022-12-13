@@ -158,7 +158,7 @@ const BImage = (data) => {
             width={data.width}
             height={data.height}
             className={data.className}
-            style={{width: "auto", height: "auto"}}
+            style={data.style ? data.style : {width: "auto", height: "auto"}}
             alt={data.alt}/>
             {data.description? 
             <p className="text-center pt-3 italic text-cyan-600 text-[16px] md:text-[18px]">{data.description}</p>:''}

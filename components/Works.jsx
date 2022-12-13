@@ -9,7 +9,7 @@ import { BsPalette, BsCodeSquare } from "react-icons/bs";
 
 const WorkPage = () => {
     return(
-        <div className="max-w-[550px] mx-auto mt-10">
+        <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6">
                 <div className="mt-[110px] text-left">
                     <div className="group/cont">
