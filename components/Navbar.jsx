@@ -12,7 +12,7 @@ const Navbar = () => {
     const [scrollDir, setScrollDir] = useState("top");
 
     useEffect(() => {
-        const threshold = 80;
+        const threshold = 120;
         let lastScrollY = window.pageYOffset;
         let ticking = false;
 
