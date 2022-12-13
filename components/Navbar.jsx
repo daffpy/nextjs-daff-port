@@ -92,44 +92,48 @@ const Navbar = () => {
             </div>
             <div className={nav ? "md:hidden fixed right-0 top-0 w-[65%] sm:w-[50%] md:w-[45%] h-screen bg-black p-10 ease-in duration-300 opacity-[.9] font-[STUSSY] z-[2]" : 'fixed right-[-100%] duration-400'}>
                 <button onClick={handleNav} className="group border px-4 py-1 rounded-tl-[90%] rounded-tr-[50%] rounded-br-[75%] rounded-bl-[50%] hover:animate-pulse">
-                    <div className=" text-[24px] group-hover:line-through">
+                    <div className=" text-[24px]">
                         x
                     </div>
                 </button>
-                <div>
-                    <ul>
+                <div className="mt-[100px] text-center">
+                    <ul className="py-6">
                         {currentPath === '/about' ?(
                                 <span>
-                                    <li className="py-6 mt-[100px] text-center text-lg line-through text-white ">About</li>
+                                    <div className=" before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
+                                    <li className="text-lg text-white relative ">About</li></div>
                                 </span>
 
                             ):(
                                 <Link href='/about'>
-                                    <li className="py-6 mt-[100px] text-center text-lg hover:line-through hover:text-white hover:animate-pulse">About</li>
+                                    <div className="group text-center inline-block text-lg">
+                                    <li className="group-hover:bg-[length:100%_100%] p-2 marker marker--mark">About</li></div>
                                 </Link>
                             )}
                     </ul>
-                    <ul>
+                    <ul className="py-6">
                             {currentPath === '/works' ?(
                                 <span>
-                                    <li className="py-6  text-center text-lg line-through text-white">Works</li>
+                                    <div className=" before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
+                                    <li className="text-lg relative text-white">Works</li></div>
                                 </span>
 
                             ):(
                                 <Link href='/works'>
-                                    <li className="py-6 text-center text-lg hover:line-through hover:text-white hover:animate-pulse">Works</li>
+                                    <div className="group text-center inline-block  text-lg">
+                                    <li className="group-hover:bg-[length:100%_100%] p-2 marker marker--mark">Works</li></div>
                                 </Link>
                             )}
                     </ul>
-                    <ul>
+                    <ul className="py-6">
                             {currentPath === '/blog' ?(
-                                <span>
-                                    <li className="py-6  text-center text-lg line-through text-white">Blog</li>
-                                </span>
+                                <div className=" before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
+                                    <li className="text-lg relative text-white">Blog</li></div>
 
                             ):(
                                 <Link href='/blog'>
-                                    <li className="py-6 text-center text-lg hover:line-through hover:text-white hover:animate-pulse">Blog</li>
+                                    <div className="group text-center inline-block  text-lg">
+                                    <li className="group-hover:bg-[length:100%_100%] p-2 marker marker--mark">Blog</li></div>
                                 </Link>
                             )}
                     </ul>
