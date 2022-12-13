@@ -1,12 +1,12 @@
 import React from "react";
 import { Tooltip } from "@nextui-org/react";
-import Tracks from "../components/TopTrack.jsx";
-import Avatar from "../components/GetProfile.jsx";
+import Tracks from "../api/TopTrack.jsx";
+import Avatar from "../api/GetProfile.jsx";
 import { HTMLIcon, CSSIcon, SFIcon, 
     JSIcon, PYIcon, CPPIcon, 
     LuaIcon, AseIcon, PSIcon,
     LosIcon, KritaIcon, UnityIcon, 
-    VSIcon, BlenderIcon, MixIcon,} from "../public/assets/icons/aboutIcon";
+    VSIcon, BlenderIcon, MixIcon,} from "../../public/assets/icons/aboutIcon";
 
 const AboutPage = () => {
     return(

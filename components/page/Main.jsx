@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import ArrIcon from "../public/assets/icons/rBtnIcon";
+import ArrIcon from "../../public/assets/icons/rBtnIcon";
 
 const MainPage = () => {
     return(

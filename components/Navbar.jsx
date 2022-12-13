@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import Link from "next/link";
 import MyIcon from '../public/assets/icons/myIcon.jsx'
 import {AiOutlineMenu} from "react-icons/ai"
@@ -9,13 +9,53 @@ const Navbar = () => {
     const router = useRouter()
     const currentPath = router.pathname
     const [nav,setNav] = useState(false)
+    const [scrollDir, setScrollDir] = useState("top");
+
+    useEffect(() => {
+        const threshold = 80;
+        let lastScrollY = window.pageYOffset;
+        let ticking = false;
+
+        const updateScrollDir = () => {
+        const scrollY = window.pageYOffset;
+        if(scrollY < 10){
+            setScrollDir('top')
+        }
+
+        if (Math.abs(scrollY - lastScrollY) < threshold) {
+            ticking = false;
+            return;
+        }
+        setScrollDir(scrollY > lastScrollY ? "down" : "up");
+
+        lastScrollY = scrollY > 0 ? scrollY : 0;
+        ticking = false;
+        };
+
+        const onScroll = () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateScrollDir);
+            ticking = true;
+        }
+        };
+
+        window.addEventListener("scroll", onScroll);
+
+        console.log(scrollY, scrollDir);
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [scrollDir]);
 
     const handleNav = () => {
         setNav(!nav)
     }
     return(
         <div>
-            <div className={"max-w-[800px] md:w-[800px] fixed top-0 inset-x-0 mx-auto pt-5 pb-1 font-[STUSSY]" + (!nav ? " backdrop-blur-[4px] bg-[#0E1116]/50 z-[9999]": '')}>                
+            <div className={"max-w-[800px] ease-in-out fixed duration-200 md:w-[800px] top-0 inset-x-0 mx-auto pb-1 font-[STUSSY]" + 
+                            (!nav ? " backdrop-blur-[4px] bg-[#0E1116]/50 z-[1]": '') + 
+                            (scrollDir == 'top' ? ' pt-5 ' : '') + 
+                            (scrollDir == 'down' ? ' translate-y-[-100%]' : '') + 
+                            (scrollDir == 'up' ? ' translate-y-[0%] pt-0': '')}>                
                 <div className="pl-2 md:pl-4 flex justify-between items-center">
                     {currentPath === '/' ? (
                         <div className="flex mt-1">

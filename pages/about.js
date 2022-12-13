@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import AboutPage from '../components/About'
+import AboutPage from '../components/page/About'
 
 export default function Home() {
   return (

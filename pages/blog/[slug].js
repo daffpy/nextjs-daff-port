@@ -20,7 +20,7 @@ const PostPage = ({ frontMatter: { title, ddate, description, tags },slug, mdxSo
   return (
     <div>
         <Head>
-            <title>Daffa - Developer & Pixel Artist</title>
+            <title>{title}</title>
             <meta name="description" content="another person from Indonesia" />
             <link rel="icon" href="/icon2.png" />
         </Head>

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import MainPage from '../components/Main'
+import MainPage from '../components/page/Main'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import { getSortedPostsData } from '../lib/posts.js';

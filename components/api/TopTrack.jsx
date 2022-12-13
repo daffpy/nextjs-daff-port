@@ -1,4 +1,4 @@
-import Track from '../components/Track';
+import Track from '../api/Track';
 import useSWR from 'swr'
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())

@@ -1,10 +1,10 @@
 import React,{useReducer} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import OlliePicGif from "../public/assets/img/ollie1.gif"
-import OlliePic from "../public/assets/img/ollie1-static.png"
+import OlliePicGif from "../../public/assets/img/ollie1.gif"
+import OlliePic from "../../public/assets/img/ollie1-static.png"
 import {FaTwitter, FaDiscord} from "react-icons/fa"
-import ArrIcon from "../public/assets/icons/rBtnIcon";
+import ArrIcon from "../../public/assets/icons/rBtnIcon";
 import { BsPalette, BsCodeSquare } from "react-icons/bs";
 
 const WorkPage = () => {

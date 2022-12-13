@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import {WorkPage} from '../../components/Works'
+import {WorkPage} from '../../components/page/Works'
 
 export default function Home() {
   return (
