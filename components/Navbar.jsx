@@ -51,8 +51,7 @@ const Navbar = () => {
     }
     return(
         <div>
-            <div className={"max-w-[800px] ease-in-out fixed duration-200 md:w-[800px] top-0 inset-x-0 mx-auto pb-1 font-[STUSSY]" + 
-                            (!nav ? " backdrop-blur-[4px] bg-[#0E1116]/50 z-[1]": '') + 
+            <div className={"max-w-[800px] backdrop-blur-[4px] bg-[#0E1116]/50 z-[1] ease-in-out fixed duration-200 md:w-[800px] top-0 inset-x-0 mx-auto pb-1 font-[STUSSY]" + 
                             (scrollDir == 'top' ? ' pt-5 ' : '') + 
                             (scrollDir == 'down' ? ' translate-y-[-100%]' : '') + 
                             (scrollDir == 'up' ? ' translate-y-[0%] pt-0': '')}>                
