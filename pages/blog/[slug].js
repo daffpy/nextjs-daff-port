@@ -8,11 +8,11 @@ import Navbar from '../../components/Navbar'
 import Head from 'next/head'
 import Image from "next/image";
 import readingTime from 'reading-time'
-import { Superchat, HugeQuote, BImage, WhatsappContainer, Whatsapp } from '../../components/CustomUI'
+import { Superchat, HugeQuote, BImage, WhatsappContainer, Whatsapp, AlertSign } from '../../components/CustomUI'
 
 //import SyntaxHighlighter from 'react-syntax-highlighter'
 
-const components = {Image, BImage, Superchat, HugeQuote, WhatsappContainer, Whatsapp}
+const components = {Image, BImage, Superchat, HugeQuote, WhatsappContainer, Whatsapp, AlertSign}
 
 
 const PostPage = ({ frontMatter: { title, ddate, description, tags },slug, mdxSource, readTime}) => {

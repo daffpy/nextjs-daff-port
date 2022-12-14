@@ -178,7 +178,7 @@ const Navbar = () => {
                             )}
                     </ul>
                 </div>
-                <div className="text-[#cbd5e0] absolute bottom-10">
+                <div className="text-[#cbd5e0] absolute bottom-20">
                     @DAFfXcx
                 </div>
             </div>

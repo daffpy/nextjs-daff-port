@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import {AiOutlineExclamationCircle, AiOutlineInfoCircle} from "react-icons/ai"
+
 
 function WhatsappContainer({block, children}) {
     return (
@@ -164,5 +166,37 @@ const BImage = (data) => {
             <p className="text-center pt-3 italic text-cyan-600 text-[16px] md:text-[18px]">{data.description}</p>:''}
         </div>
     );
-  }
-export {WhatsappContainer, Whatsapp, Superchat, HugeQuote, BImage}
+}
+const AlertSign = (data) =>{
+    return(
+        <div className={data.warning ? "bg-rose-800/40 my-10":"bg-slate-700/40 my-10"}>
+        <div className={"max-w-[800px] mx-auto" + (data.warning ? " bg-rose-800/50" : " bg-slate-700/50")}>
+            <div className="text-white pt-6 pb-8 px-2 font-outfit">
+                <div className="flex px-5 items-center gap-x-2">
+                    {data.warning ? (
+                        <>
+                        <AiOutlineExclamationCircle/>
+                        <p className="font-bold text-base tracking-wider">
+                            Warning
+                        </p>
+                        </>
+                    ):(
+                        <>
+                        <AiOutlineInfoCircle/>
+                        <p className="font-bold text-base tracking-wider">
+                            Note
+                        </p>
+                        </>
+                    )
+                    }
+                </div>
+                <p className="pl-12 pr-5 pt-2 text-base text-slate-300 tracking-wide font-light">
+                    {data.msg}
+                </p>
+            </div>
+            </div>
+         </div>
+
+    )
+}
+export {WhatsappContainer, Whatsapp, Superchat, HugeQuote, BImage, AlertSign}
