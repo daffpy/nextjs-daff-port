@@ -25,7 +25,7 @@ const Home = ({ allPostsData}) => {
         <Head>
         <title>Daffa - Developer & Pixel Artist</title>
         <meta name="description" content="another person from Indonesia" />
-        <link rel="icon" href="/icon2.png" />
+        <link rel="icon" href="/webicon.png" />
         </Head>
         <Navbar/>
         <div className="max-w-[550px] mx-auto mt-[160px]">

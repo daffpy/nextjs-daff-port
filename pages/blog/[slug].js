@@ -22,7 +22,7 @@ const PostPage = ({ frontMatter: { title, ddate, description, tags },slug, mdxSo
         <Head>
             <title>{title}</title>
             <meta name="description" content="another person from Indonesia" />
-            <link rel="icon" href="/icon2.png" />
+            <link rel="icon" href="/webicon.png" />
         </Head>
         <Navbar/>
         <div className="max-w-[800px] mx-auto mt-[130px]">

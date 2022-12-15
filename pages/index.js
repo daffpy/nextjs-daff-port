@@ -25,7 +25,7 @@ export default function Home({ allPostsData }) {
     <div>
       <Head>
         <title>Daffa - Developer & Pixel Artist</title>
-        <link rel="icon" href="/icon2.png" />
+        <link rel="icon" href="/webicon.png" />
       </Head>
 
       <Navbar />

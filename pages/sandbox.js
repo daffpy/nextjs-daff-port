@@ -1,13 +1,8 @@
 
-import {Whatsapp,WhatsappContainer, Superchat, HugeQuote} from '../components/CustomUI'
+import {AlertSign} from '../components/CustomUI'
 
 export default function Home() {
   return (
-    <div>
-        <WhatsappContainer>
-          <Whatsapp time="14:03 PM" messages={["Hi","hey"]}/>
-          <Whatsapp me={true} time="14:04 PM" messages={["sup"]}/>
-        </WhatsappContainer>
-    </div>
+      <AlertSign warning={true} msg="This blog contains swear words and adult terms and it also may include materials that some viewers may find offensive. Viewer discretion is advised."/>
   )
 }
