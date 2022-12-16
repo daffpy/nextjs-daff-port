@@ -3,6 +3,7 @@ import Link from 'next/link.js';
 import { useState , useEffect} from 'react';
 import NowPlaying from './api/NowPlaying.jsx';
 import Status from './api/Status.jsx';
+import Time from './api/Time.jsx';
 
 
 function getTime(){
@@ -12,18 +13,11 @@ function getTime(){
         minute:'2-digit',
         hour12: false
     });
-    return str
+    return str.replace(':',' ')
 }
 
 
 const Footer = () =>{
-    const [time, setTime] = useState(getTime());
-    useEffect(() => {
-        const interval = setInterval(() => setTime(getTime()), 30000);
-        return () => {
-          clearInterval(interval);
-        };
-      }, []);
     return(
         <div>
             <div className="pt-[5em] pb-[4em]">
@@ -33,42 +27,33 @@ const Footer = () =>{
                         <NowPlaying/>
                     </div>
                     <div className='grid grid-cols-2 pb-6 pt-6 mt-6 mb-6 border-y border-y-slate-700 font-outfit'>
-                        <div className='mx-auto'>
-                        <p className='text-yellow-500 tracking-wide'>My Current Time</p>
-                        <div className='flex gap-x-2'>
-                        <p className='font-light text-slate-400 tracking-wide'>{time}</p>
-                        <p className='font-light text-slate-500'>GMT+7</p>
-                        </div>
-                        </div>
+                        <Time/>
                         <Status/>
                     </div>
                     <div className='w-full grid grid-cols-3 gap-x-4'>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
                         <Link href="/">Home</Link>
-                        <Link href="/">About</Link>
-                        <Link href="/">Works</Link>
+                        <Link href="/about">About</Link>
+                        <Link href="/works">Works</Link>
                         </div>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
-                        <a 
+                        <Link 
                         href="https://github.com/daffpy" 
                         target="_blank"
-                        rel="noopener noreferrer">Github</a>
-                        <a 
+                        rel="noreferrer noopener">Github</Link>
+                        <Link 
                         href='https://twitter.com/daffxcx'
                         target="_blank"
-                        rel="noopener noreferrer">Twitter</a>
+                        rel="noreferrer noopener">Twitter</Link>
                         </div>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
-                        <a
+                        <Link
                         href="https://discordapp.com/users/820569882860716072"
                         target="_blank"
-                        rel="noopener noreferrer">Discord</a>
+                        rel="noreferrer noopener">Discord</Link>
                         <Link href="/blog">Blog</Link>
                         </div>
-
-
                     </div>
-
                 </div>
             </div>
             </div>

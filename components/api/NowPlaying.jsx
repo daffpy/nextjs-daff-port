@@ -13,7 +13,6 @@ export default function NowPlaying() {
     }
 
     return (
-        <>
                 <div className='flex font-light flex-col text-slate-400 gap-y-3 gap-x-4'>
                     <div className='items-start'>
                     <div className='flex items-center gap-x-2'>
@@ -22,11 +21,11 @@ export default function NowPlaying() {
                     </div>
                     </div>
                     {data.isPlaying ? (
-                        <a 
+                        <Link 
                         href={data.songUrl} 
                         className='flex items-center gap-x-3' 
                         target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noreferrer noopener">
                         <div>
                             <Image src={data.albumImageUrl} height={38} width={38} className="rounded-md" alt="" />
                         </div>
@@ -37,7 +36,7 @@ export default function NowPlaying() {
                                 <p className='italic'>{data.artist}</p>
                             </div>
                         </div>
-                        </a>
+                        </Link>
 
                     ):(
                         <div className='flex items-center gap-x-3'>
@@ -45,6 +44,5 @@ export default function NowPlaying() {
                         </div>
                     )}
                 </div>
-        </>
     );
 }
