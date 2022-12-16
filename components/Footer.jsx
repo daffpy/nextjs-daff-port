@@ -18,7 +18,7 @@ function getTime(){
 const Footer = () =>{
     const [time, setTime] = useState(getTime());
     useEffect(() => {
-        const interval = setInterval(() => setTime(getTime()), 10000);
+        const interval = setInterval(() => setTime(getTime()), 30000);
         return () => {
           clearInterval(interval);
         };
