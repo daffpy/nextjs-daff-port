@@ -27,13 +27,13 @@ export default function NowPlaying() {
                         target="_blank"
                         rel="noreferrer noopener">
                         <div>
-                            <Image src={data.albumImageUrl} height={38} width={38} className="rounded-md" alt="" />
+                            <Image src={data.albumImageUrl} height={39} width={39} className="rounded-md" alt="" />
                         </div>
                         <div className='grid grid-rows-2'>
-                            <p className='truncate font-normal'>{data.title}</p>
+                            <p className='truncate font-light tracking-tight text-white'>{data.title}</p>
                             <div className='flex gap-x-1'>
-                                <p>by</p>
-                                <p className='italic'>{data.artist}</p>
+                                <p className='tracking-tight'>by</p>
+                                <p className='italic tracking-tight'>{data.artist}</p>
                             </div>
                         </div>
                         </Link>
