@@ -30,10 +30,9 @@ export default function NowPlaying() {
                             <Image src={data.albumImageUrl} height={39} width={39} className="rounded-md" alt="" />
                         </div>
                         <div className='grid grid-rows-2'>
-                            <p className='truncate font-light tracking-tight text-white'>{data.title}</p>
+                            <p className='truncate font-light text-white'>{data.title}</p>
                             <div className='flex gap-x-1'>
-                                <p className='tracking-tight'>by</p>
-                                <p className='italic tracking-tight'>{data.artist}</p>
+                                <p>{data.artist}</p>
                             </div>
                         </div>
                         </Link>
