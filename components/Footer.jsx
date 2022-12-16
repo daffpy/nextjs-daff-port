@@ -1,4 +1,5 @@
 
+import Link from 'next/link.js';
 import { useState , useEffect} from 'react';
 import NowPlaying from './api/NowPlaying.jsx';
 import Status from './api/Status.jsx';
@@ -43,23 +44,23 @@ const Footer = () =>{
                     </div>
                     <div className='w-full grid grid-cols-3 gap-x-4'>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
-                        <a href="/">Home</a>
-                        <a href="/about">About</a>
-                        <a href="/works">Works</a>
+                        <Link href="/">Home</Link>
+                        <Link href="/">About</Link>
+                        <Link href="/">Works</Link>
                         </div>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
-                        <a href="https://github.com/daffpy" 
+                        <Link href="https://github.com/daffpy" 
                         target="_blank"
-                        rel="noopener noreferrer">GitHub</a>
-                        <a href='https://twitter.com/daffxcx'
+                        rel="noopener noreferrer">Github</Link>
+                        <Link href='https://twitter.com/daffxcx'
                         target="_blank"
-                        rel="noopener noreferrer">Twitter</a>
+                        rel="noopener noreferrer">Twitter</Link>
                         </div>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
-                        <a href="https://discordapp.com/users/820569882860716072"
+                        <Link href="https://discordapp.com/users/820569882860716072"
                         target="_blank"
-                        rel="noopener noreferrer">Discord</a>
-                        <a href="/blog">Blog</a>
+                        rel="noopener noreferrer">Discord</Link>
+                        <Link href="/blog">Blog</Link>
                         </div>
 
 

@@ -1,6 +1,7 @@
 import useSWR from 'swr'
 import {BsSpotify} from 'react-icons/bs'
 import Link from 'next/link';
+import Image from 'next/image';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
@@ -27,7 +28,7 @@ export default function NowPlaying() {
                         target="_blank"
                         rel="noopener noreferrer">
                         <div>
-                            <img src={data.albumImageUrl} height={38} width={38} className="rounded-md" />
+                            <Image src={data.albumImageUrl} height={38} width={38} className="rounded-md" alt="" />
                         </div>
                         <div className='grid grid-rows-2'>
                             <p className='truncate font-normal'>{data.title}</p>
