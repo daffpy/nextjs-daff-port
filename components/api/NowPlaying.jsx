@@ -22,7 +22,7 @@ export default function NowPlaying() {
                     </div>
                     </div>
                     {data.isPlaying ? (
-                        <Link 
+                        <a 
                         href={data.songUrl} 
                         className='flex items-center gap-x-3' 
                         target="_blank"
@@ -37,7 +37,7 @@ export default function NowPlaying() {
                                 <p className='italic'>{data.artist}</p>
                             </div>
                         </div>
-                        </Link>
+                        </a>
 
                     ):(
                         <div className='flex items-center gap-x-3'>
