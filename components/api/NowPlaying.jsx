@@ -32,7 +32,7 @@ export default function NowPlaying() {
                         <div className='grid grid-rows-2'>
                             <p className='truncate font-light text-white'>{data.title}</p>
                             <div className='flex gap-x-1'>
-                                <p>{data.artist}</p>
+                                <p className='text-sm'>{data.artist}</p>
                             </div>
                         </div>
                         </Link>
