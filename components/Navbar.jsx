@@ -18,15 +18,17 @@ const Navbar = () => {
 
         const updateScrollDir = () => {
         const scrollY = window.pageYOffset;
-        if(scrollY < 10){
-            setScrollDir('top')
-        }
 
         if (Math.abs(scrollY - lastScrollY) < threshold) {
             ticking = false;
             return;
         }
-        setScrollDir(scrollY > lastScrollY ? "down" : "up");
+        const curr = window.pageYOffset;
+        if(curr <= threshold){
+            setScrollDir('top')
+        }else if(curr > threshold){
+            setScrollDir(scrollY > lastScrollY ? "down" : "up");
+        }
 
         lastScrollY = scrollY > 0 ? scrollY : 0;
         ticking = false;
@@ -41,7 +43,7 @@ const Navbar = () => {
 
         window.addEventListener("scroll", onScroll);
 
-        console.log(scrollY, scrollDir);
+        //console.log(scrollY, scrollDir);
 
         return () => window.removeEventListener("scroll", onScroll);
     }, [scrollDir]);

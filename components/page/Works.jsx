@@ -6,6 +6,7 @@ import OlliePic from "../../public/assets/img/ollie1-static.png"
 import {FaTwitter, FaDiscord} from "react-icons/fa"
 import ArrIcon from "../../public/assets/icons/rBtnIcon";
 import { BsPalette, BsCodeSquare } from "react-icons/bs";
+import Footer from "../Footer";
 
 const WorkPage = () => {
     return(
@@ -13,11 +14,11 @@ const WorkPage = () => {
             <div className="mx-6">
                 <div className="mt-[110px] text-left">
                     <div className="group/cont">
-                    <div className="font-space text-[22px]">
+                    <div className="font-outfit font-light tracking-wider text-[22px]">
                         <p><a className="marker marker--text group-hover/cont:bg-[length:100%_100%]">Wanted to know more about <span className="font-bold">my coding projects </span>?</a></p>
                     </div>
                     <Link href="/works/code">
-                    <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                    <button className=" group/btn font-outfit font-light tracking-wide flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
                         <BsCodeSquare className=" stroke-[#1d1d1e] mt-[3.5px] mr-2"/>
                         More about my coding projects
                         <ArrIcon className='stroke-[1.5px] stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
@@ -25,11 +26,11 @@ const WorkPage = () => {
                     </Link>
                     </div>
                     <div className="group/cont">
-                    <div className="font-space text-[22px] mt-[90px] group">
+                    <div className="font-outfit tracking-wider font-light text-[22px] mt-[90px] group">
                         <p><a className="marker marker--text group-hover/cont:bg-[length:100%_100%]">.. or simply view my amazing <span className="font-bold">artworks</span> ?</a></p>
                     </div>
                     <Link href="/works/art">
-                    <button className="group/btn font-space flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                    <button className="group/btn font-outfit font-light tracking-wide flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
                         <BsPalette className=" stroke-[#1d1d1e] mt-[3px] mr-2"/>
                         More about my artworks
                         <ArrIcon className='stroke-[1.5px] stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
@@ -38,10 +39,6 @@ const WorkPage = () => {
                     </div>
                     <div>
                     </div>
-
-
-
-                    <div id="footer" className="pb-[150px]"></div>
                 </div>
             </div>
         </div>
@@ -53,11 +50,11 @@ const CodePage = () => {
     return(
         <div className="max-w-[550px] mx-auto mt-10">
             <div className="mx-6">
-                <div className="mt-[110px] text-[44px] font-htiny text-left">
-                    <div className="underline">
+                <div className="mt-[110px] text-[44px] font-outfit text-left">
+                    <div className="font-bold">
                         My Projects
                     </div>
-                    <div className="font-space text-[14px] text-[#cbd5e0]">
+                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                         <p>
                             Here is a few things/projects that i've worked on during my programming journey:
                         </p>
@@ -66,7 +63,7 @@ const CodePage = () => {
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             vtuberwiki-py
                         </div>
-                        <div className=" font-space text-[14px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
                                     A wrapper for VirtualYoutuber Fandom API built in Python.  in Python. in Python. in Python.
@@ -90,7 +87,7 @@ const CodePage = () => {
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             Tycha <span className="not-italic">- Discord Bot</span>
                         </div>
-                        <div className=" font-space text-[14px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
                                     Tycha is a Discord bot which its sole purpose is to fulfill your randomness needs.
@@ -108,7 +105,7 @@ const CodePage = () => {
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             VtuberBot <span className="not-italic">- Discord Bot</span>
                         </div>
-                        <div className=" font-space text-[14px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
                                     A bot fully featured based around Vtubers. 
@@ -126,7 +123,7 @@ const CodePage = () => {
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             daffxcx.art
                         </div>
-                        <div className=" font-space text-[14px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
                                     Yet another redesign of my old portfolio website, <span className="italic font-bold">daffak.xyz</span> 
@@ -140,13 +137,10 @@ const CodePage = () => {
                             </p>
                         </div>
                     </div>
-
-
-                    <div id='footer' className="pb-[150px]">
-
-                    </div>
                 </div>
             </div>
+            <Footer/>
+
         </div>
     )
 }
@@ -182,7 +176,7 @@ const ArtPage = () => {
                     <div className="font-bold">
                         Artworks
                     </div>
-                    <div className="font-space text-[14px] text-[#cbd5e0]">
+                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                         <p>
                             Here is a collection from some of my finest artworks! i hope this will give you a rough idea of my pixel art style.
                         </p>
@@ -221,40 +215,9 @@ const ArtPage = () => {
                         </div>
                     </div>
                     </div>
-                    <div className="font-bold pt-20">
-                        Contact
-
-                    </div>
-                    <div className="font-space text-[14px] text-[#cbd5e0]">
-                        <p>
-                            Interested in my artworks and wanted to do an art commission? or simply wanted to ask couple of things about my art?
-                        </p>
-                        <p className="mt-[20px] border-b inline-block border-slate-500 pb-5">
-                            You can contact me using the platform below:
-                        </p>
-                        <div className="text-[14px] mt-[20px] mb-1 group text-white">
-                            <div className="inline-block">
-                            <a href="https://twitter.com/daffxcx" target="_blank" rel="noreferrer noopener">
-                            <p className=" flex items-center font-bold marker marker--mark hover:bg-[length:100%_100%]">
-                                <FaTwitter className="mr-2"/>Twitter - @daffxcx
-                            </p>
-                            </a></div>
-                        </div>
-                        <div className="text-[14px] mt-2 group text-white text-md">
-                            <div className="inline-block">
-                            <a href="https://discordapp.com/users/820569882860716072" target="_blank" rel="noreferrer noopener">
-                            <p className=" flex items-center font-bold marker marker--mark hover:bg-[length:100%_100%]">
-                                <FaDiscord className=" mr-2"/>Discord - daff#1913
-                            </p>
-                            </a></div>
-                        </div>
-                    </div>
-
-                    <div id='footer' className="pb-[150px]">
-
-                    </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

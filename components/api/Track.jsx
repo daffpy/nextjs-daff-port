@@ -11,7 +11,7 @@ export default function Track(track) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="inline-block group-hover:bg-[length:100%_100%] marker marker--mark">{track.title}</div>
+            <div className="inline-block">{track.title}</div>
           </a>
           <p
             className="font-space text-[12px] text-[#cbd5e0] mb-4 truncate w-60 sm:w-96 md:w-full"

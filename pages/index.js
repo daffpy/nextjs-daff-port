@@ -3,6 +3,7 @@ import MainPage from '../components/page/Main'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import { getSortedPostsData } from '../lib/posts.js';
+import Footer from '../components/Footer';
 
 export function BlogManager(post) {
   return(
@@ -14,7 +15,7 @@ export function BlogManager(post) {
                 <p className='font-medium text-[15px] p-[2px] text-[#e60067]'>{post.readTime}</p>
               </div>
               <div className='font-bold text-[20px] p-[2px] group-hover:bg-[length:100%_100%] marker marker--text inline-block'>{post.title}</div>
-              <div className='font-space font-light text-[16px] text-[#cbd5e0] p-[2px] tracking-wide'>{post.description}</div>
+              <div className='font-outfit font-light text-[16px] text-[#cbd5e0] p-[2px] tracking-wider'>{post.description}</div>
           </Link>
         </div>
   )
@@ -29,7 +30,7 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <Navbar />
-      <MainPage className=""/>
+      <MainPage/>
       <div className="max-w-[550px] mx-auto mt-12 border-t border-t-slate-700">
             <div className="mx-6 font-outfit">
                 <div className="text-left">
@@ -39,7 +40,7 @@ export default function Home({ allPostsData }) {
                 </div>
             </div>
         </div>
-        <div className="pb-[150px]"></div>
+        <Footer/>
     </div>
   )
 }

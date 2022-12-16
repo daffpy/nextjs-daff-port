@@ -1,6 +1,7 @@
 import React from "react";
 import { Tooltip } from "@nextui-org/react";
 import Tracks from "../api/TopTrack.jsx";
+import Footer from "../Footer.jsx";
 import Avatar from "../api/GetProfile.jsx";
 import { HTMLIcon, CSSIcon, SFIcon, 
     JSIcon, PYIcon, CPPIcon, 
@@ -17,7 +18,7 @@ const AboutPage = () => {
                     <div className="mt-8  font-outfit font-bold tracking-wide">
                         About me
                     </div>   
-                    <div className="font-space text-[14px] text-[#cbd5e0]">
+                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                         <p>
                             Hi, I am Daffa - another 17 y.o boy from Indonesia, who is also a very passionate pixel artist and programmer.
                         </p>
@@ -29,7 +30,7 @@ const AboutPage = () => {
                         Knowledgebase
                     </div>
                     <div >
-                        <div className="font-space text-[14px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                             <p>
                                 List of some things that i've used on (or for) my projects:
                             </p>
@@ -102,7 +103,7 @@ const AboutPage = () => {
                         Music taste
                     </div>
                     <div>
-                        <div className="font-space text-[14px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
                             <p>
                                 Wondering what kinds of music im into?
                             </p>
@@ -113,11 +114,9 @@ const AboutPage = () => {
                     </div>
                     <Tracks />
 
-                    <div className="pb-[150px]">
-
-                    </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

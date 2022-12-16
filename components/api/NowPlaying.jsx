@@ -1,0 +1,49 @@
+import useSWR from 'swr'
+import {BsSpotify} from 'react-icons/bs'
+import Link from 'next/link';
+
+const fetcher = (...args) => fetch(...args).then(res => res.json())
+
+export default function NowPlaying() {
+    const { data } = useSWR('/api/now-playing', fetcher);  
+
+    if (!data) {
+        return null;
+    }
+
+    return (
+        <>
+                <div className='flex font-light flex-col text-slate-400 gap-y-3 gap-x-4'>
+                    <div className='items-start'>
+                    <div className='flex items-center gap-x-2'>
+                        <BsSpotify className='self-center' color='#1BD760'/>
+                        <p className="font-normal text-white">{data.isPlaying ? "Now Playing" : "Not Playing"}</p>
+                    </div>
+                    </div>
+                    {data.isPlaying ? (
+                        <Link 
+                        href={data.songUrl} 
+                        className='flex items-center gap-x-3' 
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <div>
+                            <img src={data.albumImageUrl} height={38} width={38} className="rounded-md" />
+                        </div>
+                        <div className='grid grid-rows-2'>
+                            <p className='truncate font-normal'>{data.title}</p>
+                            <div className='flex gap-x-1'>
+                                <p>by</p>
+                                <p className='italic'>{data.artist}</p>
+                            </div>
+                        </div>
+                        </Link>
+
+                    ):(
+                        <div className='flex items-center gap-x-3'>
+                            <p className='italic'>beep.. boop.. not playing anything right now..</p>
+                        </div>
+                    )}
+                </div>
+        </>
+    );
+}

@@ -9,13 +9,13 @@ const MainPage = () => {
                 <div className="mt-[110px] text-[44px] font-outfit font-bold tracking-wide text-left">
                     Hi, my name is <span className="">Daffa</span>.
                 </div>
-                <div className="font-space text-[16px] text-left">
+                <div className="font-outfit font-light tracking-wide text-[16px] text-left">
                     <div className="text-[#cbd5e0]">
                             I am a hobbyist developer and a pixel artist. This is my personal website showcasing stuff about me and my latest ventures.
 
                     </div>
                     <Link className="" href="/about">
-                    <button className="items-center group flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[45px] text-[16px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                    <button className=" tracking-wide items-center group flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[45px] text-[16px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
                         More about me
                         <ArrIcon className='stroke-[1.5px] stroke-[#1d1d1e] ml-3 ease-in duration-200 group-hover:scale-x-[1.5] group-hover:ml-4' />
                     </button>

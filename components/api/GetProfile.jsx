@@ -1,5 +1,6 @@
 import Profile from '../api/Profile';
 import useSWR from 'swr'
+import Footer from '../Footer';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 

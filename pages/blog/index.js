@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer';
 import { getSortedPostsData } from '../../lib/posts';
 
 export function BlogManager(post) {
@@ -14,7 +15,7 @@ export function BlogManager(post) {
                 <p className='font-medium text-[15px] p-[2px] text-[#e60067]'>{post.readTime}</p>
               </div>
               <div className='font-bold text-[20px] p-[2px] group-hover:bg-[length:100%_100%] marker marker--text inline-block'>{post.title}</div>
-              <div className='font-space font-light text-[16px] text-[#cbd5e0] p-[2px] tracking-wide'>{post.description}</div>
+              <div className='font-outfit font-light text-[16px] text-[#cbd5e0] p-[2px] tracking-wider'>{post.description}</div>
           </Link>
         </div>
   )
@@ -37,6 +38,7 @@ const Home = ({ allPostsData}) => {
                 </div>
             </div>
         </div>
+        <Footer/>
     </div>
   )
 }
