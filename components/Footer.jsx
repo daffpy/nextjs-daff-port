@@ -37,20 +37,20 @@ const Footer = () =>{
                         <Link href="/works">Works</Link>
                         </div>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
-                        <Link 
+                        <a 
                         href="https://github.com/daffpy" 
                         target="_blank"
-                        rel="noreferrer noopener">Github</Link>
-                        <Link 
+                        rel="noreferrer noopener">Github</a>
+                        <a 
                         href='https://twitter.com/daffxcx'
                         target="_blank"
-                        rel="noreferrer noopener">Twitter</Link>
+                        rel="noreferrer noopener">Twitter</a>
                         </div>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
-                        <Link
+                        <a
                         href="https://discordapp.com/users/820569882860716072"
                         target="_blank"
-                        rel="noreferrer noopener">Discord</Link>
+                        rel="noreferrer noopener">Discord</a>
                         <Link href="/blog">Blog</Link>
                         </div>
                     </div>
