@@ -26,7 +26,7 @@ const AboutPage = () => {
                             I'm very interested in game development, machine learning and competitive programming. I also love doing pixel art that are mainly based on Vtubers.
                         </p>
                     </div>
-                    <div className="mt-[65px] text-[32px] text-left underline underline-offset-4 font-outfit font-bold tracking-wide">
+                    <div className="mt-[65px] text-[32px] text-left underline decoration-dotted underline-offset-4 decoration-indigo-500 font-outfit font-bold tracking-wide">
                         Knowledgebase
                     </div>
                     <div >
@@ -99,7 +99,7 @@ const AboutPage = () => {
                             </Tooltip>
                         </div>
                     </div>
-                    <div className="mt-[65px] text-[32px] text-left underline underline-offset-4 font-outfit font-bold tracking-wide">
+                    <div className="mt-[65px] text-[32px] text-left underline decoration-dotted underline-offset-4 decoration-indigo-500 font-outfit font-bold tracking-wide">
                         Music taste
                     </div>
                     <div>
