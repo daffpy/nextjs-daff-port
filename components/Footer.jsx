@@ -5,18 +5,6 @@ import NowPlaying from './api/NowPlaying.jsx';
 import Status from './api/Status.jsx';
 import Time from './api/Time.jsx';
 
-
-function getTime(){
-    const str = new Date().toLocaleTimeString('en-US', 
-    { timeZone: 'Asia/Jakarta',
-        hour: '2-digit',
-        minute:'2-digit',
-        hour12: false
-    });
-    return str.replace(':',' ')
-}
-
-
 const Footer = () =>{
     return(
         <div>

@@ -52,10 +52,10 @@ a {
 */
 @layer components {
   .WAText{
-    @apply text-white max-w-[200px] md:max-w-[300px] font-sans font-normal tracking-normal leading-5  text-[12px] md:text-sm break-words pr-[8px] md:pr-[12px] pb-[1px]
+    @apply text-white max-w-[200px] md:max-w-[300px] font-sans font-medium tracking-normal leading-5  text-[12px] md:text-sm break-words pr-[8px] md:pr-[12px] pb-[1px]
   }
   .WATime{
-    @apply text-gray-400 text-[10px] leading-4 md:text-xs font-sans font-normal tracking-normal justify-self-end self-end
+    @apply text-gray-400 text-[10px] leading-4 md:text-xs font-sans font-medium tracking-normal justify-self-end self-end
   }
   .WACont{
     @apply items-center grid grid-cols-whatsapp max-w-[350px] bg-[#252D32] min-h-[40px] pl-3 pr-2 py-[6px] text-[13px] md:text-[14px] rounded-r-xl rounded-bl-xl
@@ -101,7 +101,7 @@ a {
   }
 
   main h3 {
-    @apply text-3xl md:text-[32px] font-normal tracking-wide ;
+    @apply text-3xl md:text-[32px] font-medium tracking-wide ;
   }
   main h4 {
     @apply text-base font-light tracking-wide;

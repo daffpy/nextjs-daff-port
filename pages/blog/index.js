@@ -15,7 +15,7 @@ export function BlogManager(post) {
                 <p className='text-[15px] p-[2px] text-slate-400'>·</p>
                 <p className='font-medium text-[14px] p-[2px] text-[#e60067]'>{post.readTime}</p>
               </div>
-              <div className='font-normal text-[19px] p-[2px] group-hover:bg-[length:100%_100%] marker marker--text inline-block'>{post.title}</div>
+              <div className='font-medium text-[19px] p-[2px] group-hover:bg-[length:100%_100%] marker marker--text inline-block'>{post.title}</div>
               <div className='font-outfit font-light text-[16px] text-slate-400 p-[2px] tracking-wide'>{post.description}</div>
           </Link>
         </div>

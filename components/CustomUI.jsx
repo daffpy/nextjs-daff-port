@@ -10,7 +10,7 @@ function WhatsappContainer({block, children}) {
                 {children}
                 <div className={"p-3 mx-auto max-w-[350px]" + (!block ? " hidden":'')}>
                     <div className="bg-[#252D32] min-h-[40px] py-2 rounded-xl mt-10 mb-3">
-                        <p className="text-center text-gray-400 md:text-sm font-sans leading-5  text-[12px] tracking-normal font-normal break-words">
+                        <p className="text-center text-gray-400 md:text-sm font-sans leading-5  text-[12px] tracking-normal font-medium break-words">
                             You blocked this contact. Tap to unblock
                         </p>
                     </div>
