@@ -22,12 +22,12 @@ export default function Status() {
     return (
         <div className='mx-auto'>
             <p className='text-yellow-500 tracking-wide font-medium'>CURRENT STATUS</p>
-            <div className='flex items-center gap-x-[6px]'>
+            <div className='flex items-center gap-x-[5px]'>
                 <div>
                 <GoPrimitiveDot className={'animate-ping absolute ' + (statusColor[0])}/>
                 <GoPrimitiveDot className={statusColor[1]}/>
                 </div>
-                <p className='font-light text-slate-400 capitalize tracking-wide'>{status}</p>
+                <p className='font-light text-[15px] text-slate-400 capitalize tracking-wide'>{status}</p>
             </div>
         </div>
     );
