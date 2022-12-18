@@ -10,7 +10,7 @@ function WhatsappContainer({block, children}) {
                 {children}
                 <div className={"p-3 mx-auto max-w-[350px]" + (!block ? " hidden":'')}>
                     <div className="bg-[#252D32] min-h-[40px] py-2 rounded-xl mt-10 mb-3">
-                        <p className="text-center text-gray-400 md:text-sm font-sans leading-5  text-[12px] tracking-normal font-medium break-words">
+                        <p className="text-center text-gray-400 md:text-sm font-sans leading-5  text-[12px] tracking-normal font-normal break-words">
                             You blocked this contact. Tap to unblock
                         </p>
                     </div>
@@ -145,7 +145,7 @@ const HugeQuote = (data) =>{
             <div className="py-5">
             <div className="relative py-6">
                 <div className="py-1 md:py-3 after:absolute after:border-t after:border-t-slate-600 after:h-[1px] after:w-[7%] after:m-auto after:top-0 after:left-0 after:right-0"></div>
-                <p className="text-[24px] md:text-[32px] font-outfit font-medium text-white tracking-wider leading-relaxed">{data.msg}</p>
+                <p className="text-[24px] md:text-[32px] font-outfit font-normal text-white tracking-wider leading-relaxed">{data.msg}</p>
                 <div className="py-1 md:py-3 after:absolute after:border-b after:border-b-slate-600 after:h-[1px] after:w-[7%] after:m-auto after:bottom-0 after:left-0 after:right-0"></div>
             </div>
             </div>
