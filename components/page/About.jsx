@@ -1,15 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import { Tooltip } from "@nextui-org/react";
 import Tracks from "../api/TopTrack.jsx";
 import Footer from "../Footer.jsx";
 import Avatar from "../api/GetProfile.jsx";
+
+import { Pagination} from '@nextui-org/react';
+
+
 import { HTMLIcon, CSSIcon, SFIcon, 
     JSIcon, PYIcon, CPPIcon, 
     LuaIcon, AseIcon, PSIcon,
     LosIcon, KritaIcon, UnityIcon, 
     VSIcon, BlenderIcon, MixIcon,} from "../../public/assets/icons/aboutIcon";
+   
 
 const AboutPage = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+    };
     return(
         <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6">
@@ -30,7 +39,7 @@ const AboutPage = () => {
                         Knowledgebase
                     </div>
                     <div >
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-400 mt-2">
                             <p>
                                 List of some things that i've used on (or for) my projects:
                             </p>
@@ -103,7 +112,7 @@ const AboutPage = () => {
                         Music taste
                     </div>
                     <div>
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] mt-2 text-slate-400">
                             <p>
                                 Wondering what kinds of music im into?
                             </p>
@@ -112,8 +121,10 @@ const AboutPage = () => {
                             </p>
                         </div>
                     </div>
-                    <Tracks />
-
+                    <Tracks currentPage={currentPage} />
+                    <div className="justify-center flex">
+                    <Pagination className="[&>button]:bg-[#0E1116] [&>button>span]:text-slate-400  [&>button:hover]:bg-black [&>p]:bg-black" total={2} animated={false} initialPage={1} onChange={handlePageChange} css={{$$paginationTextColor : '#FFFFFF', 'font-family': 'Outfit', $$paginationColor:'#0E1116', $$paginationScaleTransform: 1}}/>
+                    </div>
                 </div>
             </div>
             <Footer/>

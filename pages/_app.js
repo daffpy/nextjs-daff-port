@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import '../styles/globals.scss'
-import localFont from '@next/font/local'
 
 function MyApp({ Component, pageProps }) {
   /*
