@@ -9,7 +9,19 @@ export default function NowPlaying() {
     const { data } = useSWR('/api/now-playing', fetcher);  
 
     if (!data) {
-        return null;
+        return (
+            <div className='flex font-light flex-col text-slate-400 gap-y-4 gap-x-4'>
+                    <div className='items-start'>
+                    <div className='flex items-center gap-x-2'>
+                        <BsSpotify className='self-center' color='#1BD760'/>
+                        <p className="font-medium text-[17px] text-white">{"Not Playing"}</p>
+                    </div>
+                    </div>
+                    <div className='flex items-center gap-x-3'>
+                        <p className='italic'>beep.. boop.. loading data..</p>
+                    </div>
+                </div>
+        );
     }
 
     return (
