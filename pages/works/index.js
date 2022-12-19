@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Daffa - Developer & Pixel Artist</title>
+        <title>Works | Daffa - Developer & Pixel Artist</title>
         <meta name="description" content="another person from Indonesia" />
         <link rel="icon" href="/webicon.png" />
       </Head>

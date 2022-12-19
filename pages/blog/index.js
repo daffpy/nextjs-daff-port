@@ -25,7 +25,7 @@ const Home = ({ allPostsData}) => {
   return (
     <div>
         <Head>
-        <title>Daffa - Developer & Pixel Artist</title>
+        <title>Blog | Daffa - Developer & Pixel Artist</title>
         <meta name="description" content="another person from Indonesia" />
         <link rel="icon" href="/webicon.png" />
         </Head>
