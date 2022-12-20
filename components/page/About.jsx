@@ -3,6 +3,7 @@ import { Tooltip } from "@nextui-org/react";
 import Tracks from "../api/TopTrack.jsx";
 import Footer from "../Footer.jsx";
 import Avatar from "../api/GetProfile.jsx";
+import { BImage } from "../CustomUI.jsx";
 
 import { Pagination} from '@nextui-org/react';
 
@@ -27,23 +28,24 @@ const AboutPage = () => {
                     <div className="mt-8  font-outfit font-bold tracking-wide">
                         About me
                     </div>   
-                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                    <div className="font-outfit font-light leading-relaxed text-[15px] md:text-[16px] text-slate-300">
                         <p>
-                            Hi, I am Daffa - another 17 y.o boy from Indonesia, who is also a very passionate pixel artist and programmer.
-                        </p>
-                        <p className="mt-[20px]">
-                            I'm very interested in game development, machine learning and competitive programming. I also love doing pixel art that are mainly based on Vtubers.
+                            Hi, I am Daffa - a 17 years old <a className="underline decoration-dashed font-normal decoration-sky-500 underline-offset-2">developer</a>, <a className="underline decoration-dashed font-normal decoration-indigo-500 underline-offset-2">pixel artist</a> and a <a className="underline  font-normal decoration-pink-500 underline-offset-2">senior highschooler</a> based in Jakarta, Indonesia.
+                            I love to utilize my laptop for anything, from coding, gaming and chatting with my friends!
+                            <br/> 
+                            <br/> 
+                            I'm also very interested in learning anything new, so as a hobby besides coding, i usually <a className="underline  font-normal decoration-pink-500 underline-offset-2">write blogs</a> and <a className="underline  font-normal decoration-pink-500 underline-offset-2">make a pixel art</a> that is usually based around <a className="underline decoration-dashed font-normal decoration-indigo-500 underline-offset-2">Vtubers</a> <a className="text-slate-400">(Virtual Youtubers)</a> and its communities.
                         </p>
                     </div>
                     <div className="mt-[65px] text-[32px] text-left underline decoration-dotted underline-offset-4 decoration-indigo-500 font-outfit font-bold tracking-wide">
                         Knowledgebase
                     </div>
                     <div >
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-400 mt-2">
-                            <p>
+                        <div className="font-outfit font-light tracking-wide leading-relaxed text-[14px] md:text-[15px] mt-2">
+                            <p className="text-slate-300">
                                 List of some things that i've used on (or for) my projects:
                             </p>
-                            <p className="italic">
+                            <p className="italic text-slate-400">
                                 Tip: you can hover or click the image to find out what each icon means!
                             </p>
                         </div>
@@ -112,7 +114,7 @@ const AboutPage = () => {
                         Music taste
                     </div>
                     <div>
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] mt-2 text-slate-400">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] mt-2 text-slate-300 leading-relaxed">
                             <p>
                                 Wondering what kinds of music im into?
                             </p>

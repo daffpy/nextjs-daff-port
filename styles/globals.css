@@ -101,7 +101,7 @@ a {
   }
 
   main h3 {
-    @apply text-3xl md:text-[32px] font-normal tracking-wide ;
+    @apply text-3xl md:text-[32px] font-medium tracking-wide ;
   }
   main h4 {
     @apply text-base font-light tracking-wide;
