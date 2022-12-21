@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {AiOutlineExclamationCircle, AiOutlineInfoCircle} from "react-icons/ai"
 
 
@@ -128,4 +129,50 @@ const AlertSign = (data) =>{
 
     )
 }
-export {WhatsappContainer, Whatsapp, Superchat, HugeQuote, BImage, AlertSign}
+const PaginationBlog = (data) =>{
+
+    return(
+            <div className='py-12 grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-8'>
+                {data.before != false ?(
+                    <Link href={"/blog/" + data.before.slug} className='border p-6 w-full border-slate-700/40'>
+                    <p className='font-medium text-[17px] md:text-[19px] tracking-wide text-slate-200'>
+                        Previous Blog
+                    </p>
+                    <p className={'text-[15px] md:text-[17px] font-normal tracking-[0.045em] leading-relaxed pt-1  text-slate-400'}>
+                        {data.before.title}
+                    </p>
+                    </Link>
+                ):(
+                    <div className='border p-6 w-full border-slate-700/40'>
+                    <p className='font-medium text-[17px] md:text-[19px] tracking-wide text-slate-400'>
+                        Previous Blog
+                    </p>
+                    <p className={'text-[15px] md:text-[17px] font-light tracking-[0.045em] leading-relaxed pt-1  text-slate-400 italic'}>
+                        {"Wow, you've read my first ever blog! Welcome to the jungle!"}
+                    </p>
+                    </div>
+                )}
+                {data.after != false ?(
+                    <Link href={"/blog/" + data.after.slug} className='border p-6 w-full border-slate-700/40'>
+                    <p className='font-medium text-[17px] md:text-[19px] tracking-wide text-slate-200'>
+                        Next Blog
+                    </p>
+                    <p className={'text-[15px] md:text-[17px] font-normal tracking-[0.045em] leading-relaxed pt-1  text-slate-400'}>
+                        {data.after.title}
+                    </p>
+                    </Link>
+                ):(
+                    <div className='border p-6 w-full border-slate-700/40'>
+                    <p className='font-medium text-[17px] md:text-[19px] tracking-wide text-slate-400 '>
+                        Next Blog
+                    </p>
+                    <p className={'text-[15px] md:text-[17px] font-light tracking-[0.045em] leading-relaxed pt-1  text-slate-400 italic'}>
+                        {"There is no more blog for now, Thanks for reading :)"}
+                    </p>
+                    </div>
+                )}
+
+            </div>
+    )
+}
+export {WhatsappContainer, Whatsapp, Superchat, HugeQuote, BImage, AlertSign, PaginationBlog}

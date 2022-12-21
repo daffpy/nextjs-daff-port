@@ -1,22 +1,32 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import fs from 'fs'
-import { useState, useCallback, useEffect } from 'react'
 import path from 'path'
 import matter from 'gray-matter'
 import Navbar from '../../components/Navbar'
 import Head from 'next/head'
 import Image from "next/image";
 import readingTime from 'reading-time'
-import { Superchat, HugeQuote, BImage, WhatsappContainer, Whatsapp, AlertSign } from '../../components/CustomUI'
+import { Superchat, HugeQuote, BImage, WhatsappContainer, Whatsapp, AlertSign,
+        PaginationBlog } from '../../components/CustomUI'
 
 //import SyntaxHighlighter from 'react-syntax-highlighter'
 
 const components = {Image, BImage, Superchat, HugeQuote, WhatsappContainer, Whatsapp, AlertSign}
 
+/*
+export function BeforeAfter(slug){
+  const files = fs.readdirSync(path.join('public','posts'))
+  const curr = files.indexOf(slug)
+  const b_slug = files[curr-1] !== undefined ? files[curr-1] : null 
+  const a_slug = files[curr+1] !== undefined ? files[curr+1] : null 
+  return b_slug, a_slug
 
-const PostPage = ({ frontMatter: { title, ddate, description, tags },slug, mdxSource, readTime}) => {
+}
+*/
 
+
+const PostPage = ({frontMatter: { title, ddate, description, tags },slug, mdxSource, readTime, b_fm, a_fm}) => {
   return (
     <div>
         <Head>
@@ -43,6 +53,7 @@ const PostPage = ({ frontMatter: { title, ddate, description, tags },slug, mdxSo
                 <div className='font-light py-10'>
                     <MDXRemote {...mdxSource} scope={{slug:slug}} components={components}/>
                 </div>
+                <PaginationBlog after={a_fm} before={b_fm}/>
                 </main>
             </div>
         </div>
@@ -55,7 +66,7 @@ const getStaticPaths = async () => {
 
   const paths = files.map(filename => ({
     params: {
-        slug: filename
+        slug: filename,
       }
   })) 
 
@@ -65,14 +76,27 @@ const getStaticPaths = async () => {
   }
 }
 
-const getStaticProps = async ({ params: { slug } }) => {
+const getStaticProps = async ({ params: { slug} }) => {
+  const files = fs.readdirSync(path.join('public','posts'))
+  const curr = files.indexOf(slug)
+  const {data: b_fm} = files[curr-1] !== undefined ? matter(fs.readFileSync(path.join('public','posts',files[curr-1],'index.mdx'), 'utf-8')) : {data:false}
+  files[curr-1] !== undefined ? b_fm.slug = files[curr-1] : ''
+  const {data: a_fm} = files[curr+1] !== undefined ? matter(fs.readFileSync(path.join('public','posts',files[curr+1],'index.mdx'), 'utf-8')) : {data: false}
+  files[curr+1] !== undefined ? a_fm.slug = files[curr+1] : ''
+  //const a_fm = matter(fs.readFileSync(path.join('public','posts',(files[curr+1] !== undefined ? files[curr+1] : null),'index.mdx'), 'utf-8')) 
+
   const markdownWithMeta = fs.readFileSync(path.join('public','posts',slug,'index.mdx'), 'utf-8')
+  //const test = fs.readFileSync(path.join('public','posts',a_slug,'index.mdx'), 'utf-8')
+
+  //const {data: test_x} = matter(test)
 
   const { data: frontMatter, content } = matter(markdownWithMeta)
   const mdxSource = await serialize(content)
 
   return {
     props: {
+      a_fm,
+      b_fm,
       frontMatter,
       slug,
       mdxSource,
