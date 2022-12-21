@@ -74,7 +74,7 @@ export const getStaticProps = async () => {
 export async function getStaticProps() {
   const limit = 3;
   const featuredPost = [];
-  getSortedPostsData().filter((x,index) => (x.featured === true && index <= limit - 1)).map(x => featuredPost.push(x));
+  getSortedPostsData().filter((x,index) => ((x.featured === true || x.featured !== undefined ) && index <= limit - 1)).map(x => featuredPost.push(x));
   return {
     props: {
       featuredPost,
