@@ -4,12 +4,15 @@ import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import { getSortedPostsData } from '../lib/posts.js';
 import Footer from '../components/Footer';
+import {BsPinAngle} from 'react-icons/bs'
+import {AiOutlineStar} from "react-icons/ai"
 
 export function BlogManager(post) {
   return(
         <div className='group py-6 rounded-xl tracking-wider'>
           <Link href={'/blog/' + post.id} passHref>
-              <div className='flex gap-x-2'>
+              <div className='flex gap-x-2 items-center'>
+                <AiOutlineStar className='text-slate-400'/>
                 <p className='font-light text-[14px] p-[2px] text-yellow-500'>{post.ddate}</p>
                 <p className='text-[15px] p-[2px] text-slate-500'>·</p>
                 <p className='font-medium text-[14px] p-[2px] text-[#e60067]'>{post.readTime}</p>
@@ -21,7 +24,7 @@ export function BlogManager(post) {
   )
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ featuredPost }) {
   return (
     <div>
       <Head>
@@ -34,7 +37,7 @@ export default function Home({ allPostsData }) {
       <div className="max-w-[550px] mx-auto mt-12 border-t border-t-slate-700">
             <div className="mx-6 font-outfit">
                 <div className="text-left">
-                    {allPostsData.map((post, index) => (
+                    {featuredPost.map((post, index) => (
                       <BlogManager key={index} id={post.id} readTime={post.readTime} title={post.title} description={post.description} ddate={post.ddate}/>
                     ))}
                 </div>
@@ -69,10 +72,12 @@ export const getStaticProps = async () => {
 */
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const limit = 3;
+  const featuredPost = [];
+  getSortedPostsData().filter((x,index) => (x.featured === true && index <= limit - 1)).map(x => featuredPost.push(x));
   return {
     props: {
-      allPostsData,
+      featuredPost,
     },
   };
 }

@@ -3,7 +3,6 @@ import { Tooltip } from "@nextui-org/react";
 import Tracks from "../api/TopTrack.jsx";
 import Footer from "../Footer.jsx";
 import Avatar from "../api/GetProfile.jsx";
-import { BImage } from "../CustomUI.jsx";
 
 import { Pagination} from '@nextui-org/react';
 
