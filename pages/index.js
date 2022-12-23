@@ -12,10 +12,10 @@ export function BlogManager(post) {
         <div className='group py-6 rounded-xl tracking-wider'>
           <Link href={'/blog/' + post.id} passHref>
               <div className='flex gap-x-2 items-center'>
-                <AiOutlineStar className='text-slate-400'/>
-                <p className='font-light text-[14px] p-[2px] text-yellow-500'>{post.ddate}</p>
+                <AiOutlineStar className=' text-yellow-500'/>
+                <p className='font-normal text-[14px] p-[2px] text-slate-400/70'>{post.ddate}</p>
                 <p className='text-[15px] p-[2px] text-slate-500'>·</p>
-                <p className='font-medium text-[14px] p-[2px] text-[#e60067]'>{post.readTime}</p>
+                <p className='font-medium text-[14px] p-[2px] text-slate-500/90'>{post.readTime}</p>
               </div>
               <div className='font-medium font-outfit text-[19px] p-[2px] group-hover:bg-[length:100%_100%] marker marker--text inline-block'>{post.title}</div>
               <div className='font-outfit font-light text-[16px] text-slate-400 p-[2px] tracking-wide'>{post.description}</div>
