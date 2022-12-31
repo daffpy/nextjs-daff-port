@@ -24,7 +24,7 @@ const AboutPage = () => {
             <div className="mx-6">
                 <div className="mt-[110px] text-[44px] font-htiny text-left">
                     <Avatar/>
-                    <div className="mt-8  font-outfit font-bold tracking-wide">
+                    <div className="mt-4  font-outfit font-bold tracking-wide">
                         About me
                     </div>   
                     <div className="font-outfit font-light leading-relaxed text-[15px] md:text-[16px] text-slate-300">
