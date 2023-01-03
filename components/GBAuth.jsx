@@ -30,9 +30,9 @@ function GuestbookEntry({entry, user}){
                             <div className=" text-slate-400 sm:text-[15px] tracking-wide font-light">
                                 {entry.created_by}
                             </div>
-                            <div className="text-slate-500/70">-</div>
+                            <div className="text-slate-500/70">—</div>
                             <div className=" text-slate-400/60 tracking-wide font-light text-[13px]">
-                                {format(new Date(entry.created_at), "d MMM yyyy 'at' h:mm bb")}
+                                {format(new Date(entry.created_at), "MMM d',' yyyy 'at' h:mm bb")}
                             </div>
                         </div>
                         {user && entry.created_by === user.name && (
