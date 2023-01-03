@@ -99,9 +99,10 @@ export default function Guestbook({fallbackData}) {
                 {!session &&(
                     <>
                     <div className="justify-center flex mt-2">
-                        <Link className="border mt-6 border-slate-400 py-[6px] px-12 rounded-xl cursor-pointer duration-100 bg-black/50" onClick={(e) => {
-                            e.preventDefault();
-                            signIn('github');
+                        <Link className="border mt-6 border-slate-400 py-[6px] px-12 rounded-xl cursor-pointer duration-100 bg-black/50" 
+                            onClick={(e) => {
+                                e.preventDefault();
+                                signIn('github');
                             }}
                             href="/api/auth/signin/github"
                             ><p className="text-slate-200 tracking-wider text-sm sm:text-base font-medium">Login</p></Link>
@@ -123,7 +124,7 @@ export default function Guestbook({fallbackData}) {
                             </a>
                         </div>
                         <div className="text-slate-300">
-                            <Link className="cursor-pointer hover:underline" onClick={() => signOut()}>Sign Out</Link>
+                            <a className="cursor-pointer hover:underline" onClick={() => signOut()}>Sign Out</a>
                         </div>
                     </div>
                     
