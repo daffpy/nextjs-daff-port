@@ -3,6 +3,7 @@ import {useRef, useState, Suspense} from "react";
 import useSWR,{ useSWRConfig} from 'swr';
 import { format } from 'date-fns';
 import { FormSuccess, FormError, LoadingIcon } from "./Form";
+import Link from "next/link";
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
