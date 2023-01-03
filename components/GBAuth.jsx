@@ -98,11 +98,12 @@ export default function Guestbook({fallbackData}) {
                 {!session &&(
                     <>
                     <div className="justify-center flex mt-2">
-                        <a className="border mt-6 border-slate-400 py-[6px] px-12 rounded-xl cursor-pointer duration-100 bg-black/50" onClick={(e) => {
+                        <Link className="border mt-6 border-slate-400 py-[6px] px-12 rounded-xl cursor-pointer duration-100 bg-black/50" onClick={(e) => {
                             e.preventDefault();
                             signIn('github');
                             }}
-                            ><p className="text-slate-200 tracking-wider text-sm sm:text-base font-medium">Login</p></a>
+                            href="/api/auth/signin/github"
+                            ><p className="text-slate-200 tracking-wider text-sm sm:text-base font-medium">Login</p></Link>
                     </div>
                     <div className="mt-5 text-sm text-slate-500 text-left">*Your information is only used to display your name and authorization purposes of this website <a className="text-slate-400/70 italic">(https://daffxcx.com)</a>.</div>
                     </>
@@ -121,7 +122,7 @@ export default function Guestbook({fallbackData}) {
                             </a>
                         </div>
                         <div className="text-slate-300">
-                            <a className="cursor-pointer hover:underline" onClick={() => signOut()}>Sign Out</a>
+                            <Link className="cursor-pointer hover:underline" onClick={() => signOut()}>Sign Out</Link>
                         </div>
                     </div>
                     
