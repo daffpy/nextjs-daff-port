@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profilePic from 'public/picture/profile7.jpg'
+import profilePic from 'public/picture/profile2023.jpg'
 
 
 export default function Profile(data) {
