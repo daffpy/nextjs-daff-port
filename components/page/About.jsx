@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Tooltip } from "@nextui-org/react";
-import Tracks from "../api/TopTrack.jsx";
+import Profile from "../api/Profile.jsx";
 import Footer from "../Footer.jsx";
 import Avatar from "../api/GetProfile.jsx";
 
@@ -23,7 +23,7 @@ const AboutPage = () => {
         <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6">
                 <div className="mt-[110px] text-[44px] font-htiny text-left">
-                    <Avatar/>
+                    <Profile/>
                     <div className="mt-4  font-outfit font-bold tracking-wide">
                         About me
                     </div>   
