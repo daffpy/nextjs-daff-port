@@ -25,20 +25,20 @@ function GuestbookEntry({entry, user}){
                 <div className="text-slate-200 text-base sm:text-[17px] font-light tracking-[0.03em] leading-relaxed">
                     {entry.body}
                 </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-start sm:justify-between sm:items-center flex-col sm:flex-row">
                         <div className="flex gap-x-2 items-end mt-2">
                             <div className=" text-slate-400/80 text-sm sm:text-[15px] tracking-wide font-light">
                                 {entry.created_by}<a className="text-slate-400/50">#{entry.discord_discriminator}</a><br/><a className="text-slate-500/50 text-[10px] sm:text-xs">({entry.discord_id})</a>
                             </div>
                             <div className="text-slate-500/50">—</div>
-                            <div className=" text-slate-400/60 tracking-wide font-light text-[13px]">
+                            <div className=" text-slate-400/60 tracking-wide font-light text-[12px] sm:text-[13px]">
                                 {format(new Date(entry.created_at), "MMM d',' yyyy 'at' h:mm bb")}
                             </div>
                         </div>
                         {user && entry.discord_id === user.discord_id && (
                             <div className="pr-10">
                                 <button
-                                className="text-[13px] sm:text-sm hover:underline tracking-wide font-semibold text-rose-500 "
+                                className="text-[13px] mt-2 sm:mt-0 sm:text-sm hover:underline tracking-wide font-semibold text-rose-500 "
                                 onClick={deleteEntry}
                                 >
                                     Delete
