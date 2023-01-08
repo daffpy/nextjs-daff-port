@@ -19,7 +19,6 @@ function GuestbookEntry({entry, user}){
 
         mutate('/api/guestbook');
     };
-    console.log(entry)
     return(
         <div className="py-4 border-b-slate-500/60 border-b ">
             <div className="text-left text-sm">
