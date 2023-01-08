@@ -1,9 +1,13 @@
 
 import Link from 'next/link.js';
-import { useState , useEffect} from 'react';
+import dynamic from 'next/dynamic'
 import NowPlaying from './api/NowPlaying.jsx';
 import Status from './api/Status.jsx';
-import Time from './api/Time.jsx';
+//import Time from './api/Time.jsx';
+
+const Timer = dynamic(() => import('./NewTime.jsx'), {
+    ssr: false
+})
 
 const Footer = () =>{
     return(
@@ -15,7 +19,7 @@ const Footer = () =>{
                         <NowPlaying/>
                     </div>
                     <div className='grid grid-cols-2 pb-6 pt-6 mt-6 mb-6 border-y border-y-slate-700 font-outfit'>
-                        <Time/>
+                        <Timer/>
                         <Status/>
                     </div>
                     <div className='w-full grid grid-cols-3 gap-x-4'>
