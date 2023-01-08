@@ -19,6 +19,7 @@ function GuestbookEntry({entry, user}){
 
         mutate('/api/guestbook');
     };
+    console.log(entry)
     return(
         <div className="py-4 border-b-slate-500/60 border-b ">
             <div className="text-left text-sm">
@@ -26,22 +27,22 @@ function GuestbookEntry({entry, user}){
                     {entry.body}
                 </div>
                     <div className="flex justify-between items-center">
-                        <div className="flex gap-x-2 items-center mt-2">
-                            <div className=" text-slate-400 sm:text-[15px] tracking-wide font-light">
-                                {entry.created_by}
+                        <div className="flex gap-x-2 items-end mt-2">
+                            <div className=" text-slate-400/80 text-sm sm:text-[15px] tracking-wide font-light">
+                                {entry.created_by}<a className="text-slate-400/50">#{entry.discord_discriminator}</a><br/><a className="text-slate-500/50 text-[10px] sm:text-xs">({entry.discord_id})</a>
                             </div>
-                            <div className="text-slate-500/70">—</div>
+                            <div className="text-slate-500/50">—</div>
                             <div className=" text-slate-400/60 tracking-wide font-light text-[13px]">
                                 {format(new Date(entry.created_at), "MMM d',' yyyy 'at' h:mm bb")}
                             </div>
                         </div>
-                        {user && entry.created_by === user.name && (
+                        {user && entry.discord_id === user.discord_id && (
                             <div className="pr-10">
                                 <button
-                                className="text-sm hover:underline tracking-wide font-semibold text-rose-500 "
+                                className="text-[13px] sm:text-sm hover:underline tracking-wide font-semibold text-rose-500 "
                                 onClick={deleteEntry}
                                 >
-                                Delete
+                                    Delete
                                 </button>
                             </div>
                         )}
@@ -102,12 +103,12 @@ export default function Guestbook({fallbackData}) {
                         <Link className="border mt-6 border-slate-400 py-[6px] px-12 rounded-xl cursor-pointer duration-100 bg-black/50" 
                             onClick={(e) => {
                                 e.preventDefault();
-                                signIn('github');
+                                signIn('discord');
                             }}
                             href="/api/auth/signin/github"
                             ><p className="text-slate-200 tracking-wider text-sm sm:text-base font-medium">Login</p></Link>
                     </div>
-                    <div className="mt-5 text-sm text-slate-500 text-left">*Your information is only used to display your name and authorization purposes of this website <a className="text-slate-400/70 italic">(https://daffxcx.com)</a>.</div>
+                    <div className="mt-5 text-sm text-slate-500 text-left">*Your information is only used to display your username and authorization purposes of this website <a className="text-slate-400/70 italic">(https://daffxcx.com)</a>.</div>
                     </>
                 )}
                 </div>
@@ -120,7 +121,7 @@ export default function Guestbook({fallbackData}) {
                         <div className="items-center flex gap-x-1">
                             <img src={session.user.image} className="w-5 h-5 rounded-full" />
                             <a className="tracking-wide font-normal text-slate-300 w-48 sm:w-54 text-left">
-                                <div className="truncate">{session.user.name}</div>
+                                <div className="truncate">{session.user.name}<a className="text-slate-400/70">#{session.user.discord_discriminator}</a></div>
                             </a>
                         </div>
                         <div className="text-slate-300">

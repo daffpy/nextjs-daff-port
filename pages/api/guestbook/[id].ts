@@ -9,7 +9,7 @@ export default async function handler(
   const session = await getSession({ req });
 
   const { id } = req.query;
-  const { email } = session.user;
+  const {discord_id} = session.user;
 
   const entry = await prisma.guestbook.findUnique({
     where: {
@@ -17,7 +17,7 @@ export default async function handler(
     }
   });
 
-  if (!session || email !== entry.email) {
+  if (!session || discord_id !== entry.discord_id) {
     return res.status(403).send('Unauthorized');
   }
 

@@ -17,6 +17,8 @@ export default async function handler(
       entries.map((entry) => ({
         id: entry.id.toString(),
         body: entry.body,
+        discord_id: entry.discord_id,
+        discord_discriminator: entry.discord_discriminator,
         created_by: entry.created_by,
         created_at: entry.created_at
       }))
@@ -24,7 +26,7 @@ export default async function handler(
   }
 
   const session = await getSession({ req });
-  const { email, name } = session.user;
+  const { discord_id, name, discord_discriminator } = session.user;
 
   if (!session) {
     return res.status(403).send('Unauthorized');
@@ -33,7 +35,7 @@ export default async function handler(
   if (req.method === 'POST') {
     const user = await prisma.guestbook.findMany({
       where: {
-        email: email,
+        discord_id: discord_id,
       },
       orderBy: {
         created_at: 'desc'
@@ -45,7 +47,8 @@ export default async function handler(
     }
     const newEntry = await prisma.guestbook.create({
       data: {
-        email,
+        discord_id: discord_id,
+        discord_discriminator: discord_discriminator,
         body: (req.body.body || '').slice(0, 250),
         created_by: name
       }
@@ -54,6 +57,8 @@ export default async function handler(
     return res.status(200).json({
       id: newEntry.id.toString(),
       body: newEntry.body,
+      discord_id: newEntry.discord_id,
+      discord_discriminator: newEntry.discord_discriminator,
       created_by: newEntry.created_by,
       created_at: newEntry.created_at
     });
