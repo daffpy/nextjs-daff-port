@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { Tooltip } from "@nextui-org/react";
-import Tracks from "../api/TopTrack.jsx";
 import Footer from "../Footer.jsx";
-import Avatar from "../api/GetProfile.jsx";
+import Image from "next/image"
+import profilePic from 'public/picture/profile2023_2.jpg'
 
 import { Pagination} from '@nextui-org/react';
 
@@ -23,7 +23,7 @@ const AboutPage = () => {
         <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6">
                 <div className="mt-[110px] text-[44px] font-htiny text-left">
-                    <Avatar/>
+                    <Image src={profilePic} classname="rounded-full" width={130} height={130} alt="pp" placeholder="blur" />
                     <div className="mt-4  font-outfit font-bold tracking-wide">
                         About me
                     </div>   
