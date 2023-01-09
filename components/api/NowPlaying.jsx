@@ -39,9 +39,9 @@ export default function NowPlaying() {
                         target="_blank"
                         rel="noreferrer noopener">
                         <div>
-                            <Image src={data.albumImageUrl} height={100} width={100} className="rounded-md w-10 sm:w-10 md:w-14" alt="" />
+                            <Image src={data.albumImageUrl} height={100} width={100} className="rounded-md w-10 sm:w-10 md:w-10" alt="" />
                         </div>
-                        <div className='grid grid-rows-2 w-80 sm:w-96 md:w-full'>
+                        <div className='grid grid-rows-2 w-80 sm:w-96'>
                             <p className='truncate font-light text-white'>{data.title}</p>
                             <div className='flex gap-x-1'>
                                 <p className='text-sm'>{data.artist}</p>
