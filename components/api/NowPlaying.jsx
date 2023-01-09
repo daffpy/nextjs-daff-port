@@ -41,7 +41,7 @@ export default function NowPlaying() {
                         <div>
                             <Image src={data.albumImageUrl} height={39} width={39} className="rounded-md" alt="" />
                         </div>
-                        <div className='grid grid-rows-2'>
+                        <div className='grid grid-rows-2 w-80 sm:w-96 md:w-full'>
                             <p className='truncate font-light text-white'>{data.title}</p>
                             <div className='flex gap-x-1'>
                                 <p className='text-sm'>{data.artist}</p>
