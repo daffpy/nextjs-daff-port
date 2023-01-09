@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['cdn.discordapp.com','i.scdn.co'],
   },
+  /*
   async redirects() {
     return [
       {
@@ -18,6 +19,7 @@ const nextConfig = {
       },
     ]
   },
+  */
 }
 
 module.exports = nextConfig

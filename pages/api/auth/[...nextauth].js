@@ -41,6 +41,9 @@ export const authOptions = {
     error(code, ...message) {
       console.log(code)
     },
+  },
+  pages:{
+    signIn: '../../guestbook'
   }
   
 }
