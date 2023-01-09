@@ -39,7 +39,7 @@ export default function NowPlaying() {
                         target="_blank"
                         rel="noreferrer noopener">
                         <div>
-                            <Image src={data.albumImageUrl} height={39} width={39} className="rounded-md" alt="" />
+                            <Image src={data.albumImageUrl} height={100} width={100} className="rounded-md w-10 sm:w-10 md:w-14" alt="" />
                         </div>
                         <div className='grid grid-rows-2 w-80 sm:w-96 md:w-full'>
                             <p className='truncate font-light text-white'>{data.title}</p>
