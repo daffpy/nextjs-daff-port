@@ -91,31 +91,31 @@ export default function Guestbook({fallbackData}) {
     return (
         <div className="max-w-[550px] mt-12 font-outfit">
             <div className="">
-            <div className="text-center sm:pb-6">
-                <div className="bg-slate-800/50 py-6 px-6">
-                <div className="text-xl sm:text-2xl p-1 tracking-wide font-semibold">Sign the Guestbook</div>
-                <div className="tracking-wide text-[15px] sm:text-base text-slate-400 mx-auto">Wanna say something nice ( or mean 😡 ) about the site?</div>
-                <div className="tracking-wide text-[15px] sm:text-base text-slate-400 mx-auto">
+            <div className="text-center">
                 {!session &&(
                     <>
-                    <div className="justify-center flex mt-2">
-                        <Link className="border mt-6 border-slate-400 py-[6px] px-12 rounded-xl cursor-pointer duration-100 bg-black/50" 
+                    <div className="bg-slate-800/50 py-6 px-6">
+                    <div className="text-lg sm:text-xl p-1 tracking-wide font-semibold">Sign the Guestbook</div>
+                    <div className="tracking-wide text-[14px] sm:text-[15px] text-slate-400 mx-auto">Wanna say something nice ( or mean 😡 ) about the site?</div>
+                    <div className="tracking-wide text-[14px] sm:text-[15px] text-slate-400 mx-auto"></div>
+                    <div className="justify-center flex">
+                        <Link className="border mt-3 sm:mt-5 border-slate-400 py-[6px] px-12 rounded-xl cursor-pointer duration-100 bg-black/50" 
                             onClick={(e) => {
                                 e.preventDefault();
                                 signIn('discord');
                             }}
                             href="/api/auth/signin/github"
-                            ><p className="text-slate-200 tracking-wider text-sm sm:text-base font-medium">Login</p></Link>
+                            ><p className="text-slate-200 tracking-wider text-[13px] sm:text-sm font-medium">Login</p></Link>
                     </div>
-                    <div className="mt-5 text-sm text-slate-500 text-left">*Your information is only used to display your username and authorization purposes of this website <a className="text-slate-400/70 italic">(https://daffxcx.com)</a>.</div>
+                    </div>
                     </>
                 )}
                 </div>
                 </div>
             {session?.user &&(
                 <div className="tracking-wide text-[15px] sm:text-base text-slate-400 mx-auto">
-                <div className="mt-10">
-                <form className="pb-12 pt-6" onSubmit={leaveEntry}>
+                <div className="mt-0">
+                <form className="" onSubmit={leaveEntry}>
                     <div className="pb-4 sm:pb-5 text-sm flex justify-between items-center">
                         <div className="items-center flex gap-x-1">
                             <img src={session.user.image} className="w-5 h-5 rounded-full" />
@@ -164,7 +164,5 @@ export default function Guestbook({fallbackData}) {
                     </div>
                 </Suspense>
             </div>
-            </div>
-        </div>
     )
 }

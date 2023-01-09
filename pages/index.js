@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import { getSortedPostsData } from '../lib/posts.js';
 import Footer from '../components/Footer';
-import {BsPinAngle} from 'react-icons/bs'
+//import GuestbookPage from '../components/page/Guestbook';
 import {AiOutlineStar} from "react-icons/ai"
 
 export function BlogManager(post) {
@@ -34,9 +34,9 @@ export default function Home({ featuredPost }) {
 
       <Navbar />
       <MainPage/>
-      <div className="max-w-[550px] mx-auto mt-12 border-t border-t-slate-700">
+      <div className="max-w-[550px] mx-auto mt-12 ">
             <div className="mx-6 font-outfit">
-                <div className="text-left">
+                <div className="text-left border-t border-t-slate-700 py-6">
                     {featuredPost.map((post, index) => (
                       <BlogManager key={index} id={post.id} readTime={post.readTime} title={post.title} description={post.description} ddate={post.ddate}/>
                     ))}

@@ -21,7 +21,14 @@ export default function Home() {
       </Head>
 
       <Navbar />
+      <div className="max-w-[550px] mx-auto mt-[160px] ">
+      <div className='mx-6'>
+      <div className="text-[42px] font-outfit font-bold tracking-wide">
+          Guestbook
+      </div> 
       <GuestbookPage/>
+      </div>
+      </div>
       <Footer/>
     </div>
   )

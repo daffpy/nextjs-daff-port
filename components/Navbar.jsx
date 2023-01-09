@@ -82,19 +82,6 @@ const Navbar = () => {
                     )}
                     <div className={" hidden ml-20 pr-10 text-slate-100" + (currentPath != '/blog/[slug]' ? " md:flex":'')}>
                         <ul>
-                            {currentPath === '/about' ?(
-                                <span>
-                                    <div className="mr-10 mt-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
-                                    <li className="text-sm relative text-white">About</li></div>
-                                </span>
-
-                            ):(
-                                <Link href='/about'>
-                                    <li className="mr-10 text-sm hover:bg-[length:100%_100%] p-2 marker marker--mark ">About</li>
-                                </Link>
-                            )}
-                        </ul>
-                        <ul>
                             {currentPath === '/guestbook' ?(
                                 <span>
                                     <div className="mr-10 mt-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
@@ -104,19 +91,6 @@ const Navbar = () => {
                             ):(
                                 <Link href='/guestbook'>
                                     <li className="mr-10 text-sm hover:bg-[length:100%_100%] p-2 marker marker--mark ">Guestbook</li>
-                                </Link>
-                            )}
-                        </ul>
-                        <ul>
-                            {currentPath === '/works' ?(
-                                <span>
-                                    <div className="mr-10 mt-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
-                                    <li className="relative text-sm text-white">Works</li></div>
-                                </span>
-
-                            ):(
-                                <Link href='/works'>
-                                    <li className="mr-10 text-sm hover:bg-[length:100%_100%] p-2 marker marker--mark ">Works</li>
                                 </Link>
                             )}
                         </ul>
@@ -152,20 +126,6 @@ const Navbar = () => {
                 </button>
                 <div className="mt-[100px] text-center">
                     <ul className="py-6">
-                        {currentPath === '/about' ?(
-                                <span>
-                                    <div className=" before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
-                                    <li className="text-lg text-white relative ">About</li></div>
-                                </span>
-
-                            ):(
-                                <Link href='/about'>
-                                    <div className="group text-center inline-block text-lg">
-                                    <li className="group-hover:bg-[length:100%_100%] p-2 marker marker--mark">About</li></div>
-                                </Link>
-                            )}
-                    </ul>
-                    <ul className="py-6">
                             {currentPath === '/guestbook' ?(
                                 <span>
                                     <div className=" before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
@@ -176,20 +136,6 @@ const Navbar = () => {
                                 <Link href='/guestbook'>
                                     <div className="group text-center inline-block  text-lg">
                                     <li className="group-hover:bg-[length:100%_100%] p-2 marker marker--mark">Guestbook</li></div>
-                                </Link>
-                            )}
-                    </ul>
-                    <ul className="py-6">
-                            {currentPath === '/works' ?(
-                                <span>
-                                    <div className=" before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-[#e60067] relative inline-block">
-                                    <li className="text-lg relative text-white">Works</li></div>
-                                </span>
-
-                            ):(
-                                <Link href='/works'>
-                                    <div className="group text-center inline-block  text-lg">
-                                    <li className="group-hover:bg-[length:100%_100%] p-2 marker marker--mark">Works</li></div>
                                 </Link>
                             )}
                     </ul>
