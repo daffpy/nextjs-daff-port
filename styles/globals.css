@@ -128,6 +128,8 @@ main span.terms{
 
 .wa-bg{
   background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.85)), url("https://raw.githubusercontent.com/Xetera/xetera.dev/master/content/assets/whatsapp_background.png");
-
+}
+.indo-bg{
+  background-image: linear-gradient(to right, rgba(14, 17, 22, 0.99), rgba(0, 0, 0, 0.82), rgba(14, 17, 22, 0.99)), url("https://i.ibb.co/ChJLtRL/Flag-of-Indonesia.png");
 }
 

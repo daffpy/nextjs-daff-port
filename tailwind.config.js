@@ -16,7 +16,7 @@ module.exports = {
       },
       gridTemplateColumns:{
         'whatsapp':'fit-content(1000px) auto;'
-      }
+      },
     },
   },
   plugins: [],

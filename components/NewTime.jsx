@@ -13,18 +13,18 @@ function getTime(){
 const Timer = () =>{
     const [time, setTime] = useState(getTime());
     useEffect(() => {
-        const interval = setInterval(() => setTime(getTime()), 10000);
+        const interval = setInterval(() => setTime(getTime()), 20000);
         return () => {
           clearInterval(interval);
         };
       }, []);
     return(
         <>
-            <div className='mx-auto'>
-            <p className='text-yellow-500 tracking-wide font-medium'>CURRENT TIME</p>
+            <div className="mx-auto bg-cover bg-center indo-bg ">
+            <p className='text-yellow-500 tracking-wide font-medium px-1'>CURRENT TIME</p>
             <div className='flex gap-x-2'>
-            <p className='font-light text-[15px] text-slate-400 tracking-wide'>{time}</p>
-            <p className='font-light text-[15px] text-slate-500'>GMT+7</p>
+            <p className='font-light text-[15px] text-slate-400 tracking-wide pl-1'>{time}</p>
+            <p className='font-light text-[15px] text-slate-500 pr-1'>GMT+7</p>
             </div>
             </div>
         </>
