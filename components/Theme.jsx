@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import {RiMoonFoggyLine,RiSunFoggyLine} from 'react-icons/ri'
+//import {RiMoonFoggyLine,RiSunFoggyLine} from 'react-icons/ri'
+import {WiDaySunny,WiHorizonAlt} from 'react-icons/wi'
 
 export default function ThemeToggler() {
     const { resolvedTheme, setTheme } = useTheme();
@@ -16,8 +17,8 @@ export default function ThemeToggler() {
                 setTheme(resolvedTheme === "dark" ? "light" : "dark");
             }}
         >
-            <div className="ease-in-out duration-200">
-                {resolvedTheme === "dark" ? <RiSunFoggyLine className="w-7 h-7 top-1"/> : <RiMoonFoggyLine className="w-7 h-7 fill-black" />}
+            <div className="ease-in-out duration-20">
+                {resolvedTheme === "dark" ? <WiDaySunny className="w-8 h-8 bg-black bg-slate-100/10 rounded-md"/> : <WiHorizonAlt className="w-8 h-8 fill-black bg-slate-400/20 rounded-md" />}
             </div>
         </button>
     );
