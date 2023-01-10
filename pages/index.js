@@ -51,8 +51,8 @@ export default function Home({ featuredPost }) {
                     </Link>
                 </div>
                 <div className='border-t border-t-slate-700'>
-                  <div className='pt-10 text-slate-800/90 dark:text-slate-300/90 font-light tracking-wide'>
-                    Wanna leave a remarkable message on this site for future visitors? You can do so by signing the guestbook for this site!
+                  <div className='pt-10 text-slate-800/90 leading-relaxed dark:text-slate-300/90 font-light tracking-wide'>
+                    Wanna leave a <a className='italic'>remarkable™</a> message on this site for future visitors? — You can do so by signing the guestbook for this site!
                   </div>
                   <Link className="" href="/guestbook">
                     <button className=" tracking-wide font-light items-center group flex rounded-full hover:rounded-l-lg bg-slate-900/90 dark:bg-slate-200 px-5 pt-2 pb-2 mt-10 text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">

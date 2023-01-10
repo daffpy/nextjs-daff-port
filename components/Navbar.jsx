@@ -54,11 +54,11 @@ const Navbar = () => {
     }
     return(
         <div>
-            <div className={"max-w-[755px] backdrop-blur-[4px] z-[1] ease-in-out px-2 fixed duration-200 md:w-[755px] top-0 inset-x-0 mx-auto font-[STUSSY]" +
+            <div className={"max-w-[760px] backdrop-blur-[4px] z-[1] ease-in-out fixed duration-200 md:w-[760px] top-0 inset-x-0 mx-auto font-[STUSSY]" +
                             /*(scrollDir == 'top' ? '' : '') +*/
                             (scrollDir == 'down' ? ' translate-y-[-100%]' : '') + 
                             (scrollDir == 'up' ? ' translate-y-[0%] pt-0': '')}>   
-                <div className={"ml-2 sm:ml-3 md:ml-0 flex justify-between items-center bg-white/50 pb-1 dark:bg-[#0E1116]/50"
+                <div className={"ml-2 sm:ml-3 md:ml-0 flex justify-between items-center bg-white/50 px-1 pb-1 dark:bg-[#0E1116]/50"
                                 + ((scrollDir == 'top' ? ' pt-5' : ''))}>
                     {currentPath === '/' ? (
                         <div className="flex mt-1">
