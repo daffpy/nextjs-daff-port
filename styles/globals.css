@@ -9,6 +9,13 @@ body {
   font-family: 'Inter', sans-serif;
 
 }
+html.light{
+  --themed-color: #DAF7A6;
+}
+html.dark{
+  --themed-color: #e60067;
+
+}
 @font-face {
   font-family: "STUSSY";
   src: url("../public/assets/font/StussyScript-Regular.ttf");
@@ -26,7 +33,7 @@ a {
 * {
   box-sizing: border-box;
 }
-
+/*
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -36,8 +43,47 @@ a {
     background: #0E1116;
   }
 }
+*/
+:root {
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme='dark'] {
+  --background: #0E1116;
+  --foreground: white;
+}
+
 .containers{
   max-width: "500px";
+}
+
+.marker {
+	flex: 1;
+	text-decoration: none;
+	background-image: linear-gradient(to right, var(--themed-color) 0, var(--themed-color) 100%);
+	background-position: 0 1.2em;
+	background-size: 0 100%;
+	background-repeat: no-repeat;
+	transition: background .5s;
+}
+
+.marker--ul {
+	background-position: 0 1.15em;
+	background-image: linear-gradient(to right, var(--themed-color) 0, var(--themed-color) 100%);
+}
+
+.marker--text {
+	background-position: 0 0.1em;
+}
+
+.marker--textmini {
+	background-position: 0 -0.1em;
+}
+
+.marker--mark {
+	background-position: 0 -0.2em;
 }
 
 /*
@@ -117,10 +163,10 @@ a {
   }
 }
 main span.whisper{
-  color: #cbd5e0;
+  @apply text-slate-500 dark:text-[#cbd5e0]
 }
 main span.segment{
-  color: #FDE047;
+  @apply text-orange-600 dark:text-yellow-400
 }
 main span.terms{
   @apply text-[#e60067] font-caveat leading-[1.5] text-[26px] md:text-[29px]
@@ -129,7 +175,10 @@ main span.terms{
 .wa-bg{
   background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.85)), url("https://raw.githubusercontent.com/Xetera/xetera.dev/master/content/assets/whatsapp_background.png");
 }
-.indo-bg{
+.dark-indo-bg{
   background-image: linear-gradient(to right, rgba(14, 17, 22, 0.99), rgba(0, 0, 0, 0.82), rgba(14, 17, 22, 0.99)), url("https://i.ibb.co/ChJLtRL/Flag-of-Indonesia.png");
+}
+.indo-bg{
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6)), url("https://i.ibb.co/ChJLtRL/Flag-of-Indonesia.png");
 }
 

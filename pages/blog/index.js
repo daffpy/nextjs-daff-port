@@ -11,12 +11,12 @@ export function BlogManager(post) {
         <div className='group py-5 rounded-xl tracking-wider'>
           <Link href={'/blog/' + post.id} passHref>
               <div className='flex gap-x-2'>
-                <p className='font-normal text-[14px] p-[2px] text-slate-400/70'>{post.ddate}</p>
+                <p className='font-normal text-[14px] p-[2px] text-slate-800 dark:text-slate-400/70'>{post.ddate}</p>
                 <p className='text-[15px] p-[2px] text-slate-500'>·</p>
-                <p className='font-medium text-[14px] p-[2px] text-slate-500/90'>{post.readTime}</p>
+                <p className='font-medium text-[14px] p-[2px] text-slate-600 dark:text-slate-500/90'>{post.readTime}</p>
               </div>
               <div className='font-medium text-[19px] p-[2px] group-hover:bg-[length:100%_100%] marker marker--text inline-block'>{post.title}</div>
-              <div className='font-outfit font-light text-[16px] text-slate-400 p-[2px] tracking-wide'>{post.description}</div>
+              <div className='font-outfit font-light text-[16px] text-slate-900 dark:text-slate-400 p-[2px] tracking-wide'>{post.description}</div>
           </Link>
         </div>
   )
@@ -34,8 +34,8 @@ const Home = ({ allPostsData}) => {
             <div className="mx-6 font-outfit">
                 <div className="mt-[110px] text-left">
                   <div className='flex items-center gap-x-2 pb-1'>
-                      <FiEdit className='stroke-slate-300/80 text-[14px]'/>
-                      <div className='tracking-wider font-normal text-slate-300/80 text-[14px]'>{allPostsData.length} POSTS</div>
+                      <FiEdit className='stroke-slate-900 dark:stroke-slate-300/80 text-[14px]'/>
+                      <div className='tracking-wider font-normal stroke-slate-900 dark:text-slate-300/80 text-[14px]'>{allPostsData.length} POSTS</div>
                   </div>
                     {allPostsData.map((post, index) => (
                       <BlogManager key={index} id={post.id} readTime={post.readTime} title={post.title} description={post.description} ddate={post.ddate}/>

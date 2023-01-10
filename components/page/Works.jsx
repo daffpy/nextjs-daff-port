@@ -18,10 +18,10 @@ const WorkPage = () => {
                         <p><a className="marker marker--text group-hover/cont:bg-[length:100%_100%]">Wanted to know more about <span className="font-bold">my coding projects </span>?</a></p>
                     </div>
                     <Link href="/works/code">
-                    <button className=" group/btn font-outfit font-light tracking-wide flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
-                        <BsCodeSquare className=" stroke-[#1d1d1e] mt-[3.5px] mr-2"/>
-                        More about my coding projects
-                        <ArrIcon className='stroke-[1.5px] stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                    <button className=" group/btn font-outfit font-light tracking-wide flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                        <BsCodeSquare className=" text-white dark:text-[#1d1d1e] mt-[3.5px] mr-2"/>
+                        <p className="text-white dark:text-[#1d1d1e]">More about my coding projects</p>
+                        <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
                     </button>
                     </Link>
                     </div>
@@ -30,10 +30,10 @@ const WorkPage = () => {
                         <p><a className="marker marker--text group-hover/cont:bg-[length:100%_100%]">.. or simply view my amazing <span className="font-bold">artworks</span> ?</a></p>
                     </div>
                     <Link href="/works/art">
-                    <button className="group/btn font-outfit font-light tracking-wide flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
-                        <BsPalette className=" stroke-[#1d1d1e] mt-[3px] mr-2"/>
-                        More about my artworks
-                        <ArrIcon className='stroke-[1.5px] stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                    <button className="group/btn font-outfit font-light tracking-wide flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                        <BsPalette className=" text-white dark:text-[#1d1d1e] mt-[3px] mr-2"/>
+                        <p className="text-white dark:text-[#1d1d1e]">More about my artworks</p>
+                        <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
                     </button>
                     </Link>
                     </div>
@@ -54,16 +54,17 @@ const CodePage = () => {
                     <div className="font-bold">
                         My Projects
                     </div>
-                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
                         <p>
                             Here is a few things/projects that i've worked on during my programming journey:
                         </p>
                     </div>
+                    <div>
                     <div className="group">
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             vtuberwiki-py
                         </div>
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
                                     A wrapper for VirtualYoutuber Fandom API built in Python.  in Python. in Python. in Python.
@@ -77,9 +78,9 @@ const CodePage = () => {
                             </p>
                         </div>
                         <Link href="https://github.com/daffpy/vtuberwiki-py" target="_blank" rel="noreferrer noopener">
-                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg bg-white px-5 pt-2 pb-2 mt-[40px] text-[14px] text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
                                     View Repository
-                                <ArrIcon className='stroke-[1.5px] stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                                <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
                             </button>
                         </Link>
                     </div>
@@ -87,7 +88,7 @@ const CodePage = () => {
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             Tycha <span className="not-italic">- Discord Bot</span>
                         </div>
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
                                     Tycha is a Discord bot which its sole purpose is to fulfill your randomness needs.
@@ -105,7 +106,7 @@ const CodePage = () => {
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             VtuberBot <span className="not-italic">- Discord Bot</span>
                         </div>
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
                                     A bot fully featured based around Vtubers. 
@@ -123,7 +124,7 @@ const CodePage = () => {
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             daffxcx.art
                         </div>
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
                                     Yet another redesign of my old portfolio website, <span className="italic font-bold">daffak.xyz</span> 
@@ -136,6 +137,7 @@ const CodePage = () => {
                                 Note: This is my first time using Next.JS and TailwindCSS and i can't wait to learn more about other framework.
                             </p>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -176,7 +178,7 @@ const ArtPage = () => {
                     <div className="font-bold">
                         Artworks
                     </div>
-                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-[#cbd5e0]">
+                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
                         <p>
                             Here is a collection from some of my finest artworks! i hope this will give you a rough idea of my pixel art style.
                         </p>

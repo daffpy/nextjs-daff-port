@@ -7,7 +7,7 @@ import {AiOutlineExclamationCircle, AiOutlineInfoCircle} from "react-icons/ai"
 function WhatsappContainer({block, children}) {
     return (
         <div className="max-w-[800px] mx-auto py-10">
-            <div className="max-w-[800px] min-h-[300px] bg-repeat wa-bg rounded-xl p-4">
+            <div className="max-w-[800px] min-h-[300px] bg-repeat wa-bg bg-black dark:bg-dark-wa-bg rounded-xl p-4">
                 {children}
                 <div className={"p-3 mx-auto max-w-[350px]" + (!block ? " hidden":'')}>
                     <div className="bg-[#252D32] min-h-[40px] py-2 rounded-xl mt-10 mb-3">
@@ -54,15 +54,15 @@ const Superchat = (data) => {
                     <div className="bg-[#D10100] rounded-tr-lg rounded-tl-lg grid grid-cols-4 content-center items-center grid-rows-2 justify-items-center">
                         <div className="row-span-2 pl-4 pr-2 text-center">
                             <div className="bg-purple-700 w-[60px] h-[60px] rounded-full">
-                                <p className="w-full h-full pt-4 pb-6 px-4 text-xl">
+                                <p className="w-full h-full pt-4 pb-6 px-4 text-xl text-white">
                                     {(data.name)[0]}
                                 </p>
                             </div>
                         </div>
                         <div className="col-span-3 justify-self-start self-end pt-3 px-2 text-[#F5BDBA] font-bold">{data.name}</div>
-                        <div className="row-span-1 col-span-3 justify-self-start px-2 text-xl font-bold self-start">$500.00</div>
+                        <div className="row-span-1 col-span-3 justify-self-start px-2 text-xl font-bold self-start text-white">$500.00</div>
                     </div>
-                    <div className="px-5 pt-3">
+                    <div className="px-5 pt-3 text-white">
                         {data.msg}
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const HugeQuote = (data) =>{
             <div className="py-5">
             <div className="relative py-6">
                 <div className="py-1 md:py-3 after:absolute after:border-t after:border-t-slate-600 after:h-[1px] after:w-[7%] after:m-auto after:top-0 after:left-0 after:right-0"></div>
-                <p className="text-[24px] md:text-[32px] font-outfit font-normal text-white tracking-wider leading-relaxed">{data.msg}</p>
+                <p className="text-[24px] md:text-[32px] font-outfit font-normal text-black dark:text-white tracking-wider leading-relaxed">{data.msg}</p>
                 <div className="py-1 md:py-3 after:absolute after:border-b after:border-b-slate-600 after:h-[1px] after:w-[7%] after:m-auto after:bottom-0 after:left-0 after:right-0"></div>
             </div>
             </div>
@@ -100,7 +100,7 @@ const BImage = (data) => {
 const AlertSign = (data) =>{
     return(
         <div className={data.warning ? "bg-rose-800/40 my-10":"bg-slate-700/40 my-10"}>
-        <div className={"max-w-[800px] mx-auto" + (data.warning ? " bg-rose-800/50" : " bg-slate-700/50")}>
+        <div className={"max-w-[800px] mx-auto" + (data.warning ? " bg-rose-600 dark:bg-rose-800/50" : " bg-slate-600 dark:bg-slate-700/50")}>
             <div className="text-white pt-6 pb-8 px-2 font-outfit">
                 <div className="flex px-5 items-center gap-x-2">
                     {data.warning ? (
@@ -120,7 +120,7 @@ const AlertSign = (data) =>{
                     )
                     }
                 </div>
-                <p className="pl-12 pr-5 pt-2 text-base text-slate-300 tracking-wide font-light">
+                <p className="pl-12 pr-5 pt-2 text-base text-slate-100 dark:text-slate-300 tracking-wide font-light">
                     {data.msg}
                 </p>
             </div>
@@ -135,38 +135,38 @@ const PaginationBlog = (data) =>{
             <div className='py-12 grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-8'>
                 {data.before != false ?(
                     <Link href={"/blog/" + data.before.slug} className='border px-6 py-5 w-full border-slate-700/70'>
-                    <p className='font-medium text-[17px] md:text-[18px] tracking-wide text-slate-200 leading-normal'>
+                    <p className='font-medium text-[17px] md:text-[18px] tracking-wide text-slate-800/90 dark:text-slate-200 leading-normal'>
                         Previous Blog
                     </p>
-                    <p className={'text-[15px] md:text-[16px] font-normal tracking-[0.045em] leading-relaxed mt-1  text-slate-400'}>
+                    <p className={'text-[15px] md:text-[16px] font-normal tracking-[0.045em] leading-relaxed mt-1  text-slate-800/80 dark:text-slate-400'}>
                         {data.before.title}
                     </p>
                     </Link>
                 ):(
                     <div className='border px-6 py-5 w-full border-slate-700/70'>
-                    <p className='font-medium text-[17px] md:text-[18px] tracking-wide text-slate-400 leading-normal'>
+                    <p className='font-medium text-[17px] md:text-[18px] tracking-wide text-slate-600/80 dark:text-slate-400 leading-normal'>
                         Previous Blog
                     </p>
-                    <p className={'text-[15px] md:text-[16px] font-light tracking-[0.045em] leading-relaxed mt-1  text-slate-400 italic'}>
+                    <p className={'text-[15px] md:text-[16px] font-light tracking-[0.045em] leading-relaxed mt-1  text-slate-600/80 dark:text-slate-400 italic'}>
                         {"Wow, you've read my first ever blog! Welcome to the jungle!"}
                     </p>
                     </div>
                 )}
                 {data.after != false ?(
                     <Link href={"/blog/" + data.after.slug} className='border px-6 py-5 w-full border-slate-700/70'>
-                    <p className='font-medium text-[17px] md:text-[18px] tracking-wide text-slate-200 leading-normal'>
+                    <p className='font-medium text-[17px] md:text-[18px] tracking-wide text-slate-800/90 dark:text-slate-200 leading-normal'>
                         Next Blog
                     </p>
-                    <p className={'text-[15px] md:text-[16px] font-normal tracking-[0.045em] leading-relaxed mt-1  text-slate-400'}>
+                    <p className={'text-[15px] md:text-[16px] font-normal tracking-[0.045em] leading-relaxed mt-1  text-slate-800/80 dark:text-slate-400'}>
                         {data.after.title}
                     </p>
                     </Link>
                 ):(
                     <div className='border px-6 py-5 w-full border-slate-700/70'>
-                    <p className='font-medium text-[17px] md:text-[18px] tracking-wide text-slate-400 leading-normal'>
+                    <p className='font-medium text-[17px] md:text-[18px] tracking-wide text-slate-600/80 dark:text-slate-400 leading-normal'>
                         Next Blog
                     </p>
-                    <p className={'text-[15px] md:text-[16px] font-light tracking-[0.045em] leading-relaxed mt-1  text-slate-400 italic'}>
+                    <p className={'text-[15px] md:text-[16px] font-light tracking-[0.045em] leading-relaxed mt-1  text-slate-600/80 dark:text-slate-400 italic'}>
                         {"There is no more blog for now, Thanks for reading :)"}
                     </p>
                     </div>

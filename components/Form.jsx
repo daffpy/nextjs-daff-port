@@ -34,7 +34,7 @@ const LoadingIcon = (props) => (
 
 const FormError = (data) =>{
   return(
-    <div className="flex gap-x-2 items-center  mt-3 pl-2 bg-slate-800/70 py-1">
+    <div className="flex gap-x-2 items-center  mt-3 pl-2 bg-slate-900/90 dark:bg-slate-800/70 py-1">
       <BsFillXCircleFill className="text-red-500" size={12}/>
       <div className="text-left text-sm sm:text-[15px] text-red-500">
           {data.message}
@@ -44,7 +44,7 @@ const FormError = (data) =>{
 }
 const FormSuccess = (data) =>{
   return(
-    <div className="flex gap-x-2 items-center  mt-3 pl-2 bg-slate-800/70 py-1">
+    <div className="flex gap-x-2 items-center  mt-3 pl-2 bg-slate-900/90 dark:bg-slate-800/70 py-1">
       <BsFillCheckCircleFill className="text-green-500" size={12}/>
       <div className="text-left text-sm sm:text-[15px] text-green-500">
           {data.message}

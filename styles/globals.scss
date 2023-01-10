@@ -1,7 +1,16 @@
+/*
+
+:root{
+  --themed-color: #ff3590;
+}
+[data-theme='dark'] {
+  --themed-color: #e60067;
+}
+
 .marker {
     flex: 1;
     text-decoration: none;
-    background-image: linear-gradient(to right, #e60067 0, #e60067 100%);
+    background-image: linear-gradient(to right, var(--themed-color) 0, var(--themed-color) 100%);
     background-position: 0 1.2em;
     background-size: 0 100%;
     background-repeat: no-repeat;
@@ -9,7 +18,7 @@
     
     &--ul {
       background-position: 0 1.15em;
-      background-image: linear-gradient(to right, #e60067 0, #e60067 100%);
+      background-image: linear-gradient(to right, var(--themed-color) 0, var(--themed-color) 100%);
     }
     &--text {
       background-position: 0 0.1em;
@@ -21,4 +30,4 @@
       background-position: 0 -0.2em;
     }
   }
-  
+  */
