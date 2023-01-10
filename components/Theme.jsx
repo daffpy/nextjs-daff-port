@@ -13,12 +13,13 @@ export default function ThemeToggler() {
 
     return (
         <button
+        className="dark:bg-slate-100/10 bg-slate-400/20 hover:ring-2 w-9 h-9 flex items-center justify-center ring-gray-300 rounded-md transition-all"
             onClick={() => {
                 setTheme(resolvedTheme === "dark" ? "light" : "dark");
             }}
         >
-            <div className="ease-in-out duration-20">
-                {resolvedTheme === "dark" ? <WiDaySunny className="w-8 h-8 bg-black bg-slate-100/10 rounded-md"/> : <WiHorizonAlt className="w-8 h-8 fill-black bg-slate-400/20 rounded-md" />}
+            <div>
+                {resolvedTheme === "dark" ? <WiDaySunny className="w-7 h-7"/> : <WiHorizonAlt className=" fill-black w-7 h-7" />}
             </div>
         </button>
     );
