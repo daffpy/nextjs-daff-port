@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import {AiOutlineExclamationCircle, AiOutlineInfoCircle} from "react-icons/ai"
 
 
@@ -36,7 +37,6 @@ function WAManager(data) {
         </div>
     )
 }
-
 const Whatsapp = (data) => {
     return(
         <>
@@ -175,4 +175,71 @@ const PaginationBlog = (data) =>{
             </div>
     )
 }
-export {WhatsappContainer, Whatsapp, Superchat, HugeQuote, BImage, AlertSign, PaginationBlog}
+function AccordionWrapper({category, children}){
+    return(
+        <div>
+            <div className="pt-1 text-[16px] dark:text-slate-200">
+            {category}
+            </div>
+            <ul className="list-disc pl-4 pb-2">
+                <li>
+                    <div className="flex flex-wrap gap-x-2">
+                    {children}</div>
+                </li>
+            </ul>
+        </div>
+    )
+
+}
+
+function AccordionSvg(data){
+    return(
+        <>
+        <svg fill={data.fill} className={data.className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d={data.path}/></svg>
+        </>
+
+    )
+}
+
+function AccordionManager(data) {
+    let noAnnoy = data.icon.hex.replace(/FFFFFF|0E1128|7D929E|EAEAEA/g,'currentColor')
+    if(noAnnoy !== 'currentColor'){
+        noAnnoy = `#${noAnnoy}`
+    }
+    return(
+        <>
+        <div className="flex items-center gap-x-1">
+                    <AccordionSvg path={data.icon.path} className="w-4 h-4" fill={noAnnoy}/>
+                    <div className="text-base font-light dark:text-slate-300/80 text-slate-800/80 tracking-wide">
+                        {data.desc}</div>
+        </div>
+        </>
+    )
+}
+
+const Accordion = (props) =>{
+
+    const [expanded, setExpanded] = useState(false);
+
+    return (
+    <div className="py-2">
+    <div onClick={() => setExpanded(!expanded)} className="text-gray-light cursor-pointer font-outfit text-base">
+        <div className="flex flex-row items-center text-[17px] bg-slate-300/80 rounded-t-lg dark:bg-slate-800/60 py-1 duration-500 ease-in-out">
+            <p className={`pl-3 flex-auto text-slate-800/90 dark:text-slate-200 text-[15px]`}>{props.title}</p>
+        </div>
+        <div className={`pl-3 transition-max-height duration-500 ease-in-out overflow-hidden rounded-b-md bg-zinc-100 dark:bg-slate-800/20 ${expanded ? "" : "max-h-0"}`}>
+            <div className="py-1">
+            {props.category.map((data,index)=> (
+                <AccordionWrapper key={index} category={data}>
+                    {props.icon[index].map((data, index) => (
+                        <AccordionManager key={index} icon={data} desc={data.title}/>
+
+                    ))}
+                </AccordionWrapper>
+            ))}
+            </div>
+        </div>
+    </div>
+    </div>)
+}
+export {WhatsappContainer, Whatsapp, Superchat, HugeQuote, BImage, AlertSign, PaginationBlog, Accordion}
