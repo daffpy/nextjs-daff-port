@@ -2,7 +2,7 @@ export default function Track(track) {
   const formula = track.currPage <= 1 ? 0 : (5 * (track.currPage - 1))
     return (
       <div className="group flex flex-row items-baseline border-b border-gray-200 dark:border-gray-800 max-w-3xl w-full mt-6 mb-6">
-        <p className="group-hover:text-black font-space text-sm font-bold text-slate-800/80 dark:text-[#cbd5e0]">
+        <p className="group-hover:text-black dark:group-hover:text-white font-space text-sm font-bold text-slate-800/80 dark:text-[#cbd5e0]">
           {track.ranking + formula}
         </p>
         <div className="flex flex-col pl-3">
