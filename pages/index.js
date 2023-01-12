@@ -2,11 +2,13 @@ import Head from 'next/head'
 import MainPage from '../components/page/Main'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
+import { ProjectHighlight } from '../components/CustomUI'
 import { getSortedPostsData } from '../lib/posts.js';
 import Footer from '../components/Footer';
 import ArrIcon from '../public/assets/icons/rBtnIcon';
 import {BsArrowRight} from 'react-icons/bs'
 import {AiOutlineStar} from "react-icons/ai"
+import { getTweets } from '../lib/twitter'
 
 export function BlogManager(post) {
   return(
@@ -25,7 +27,8 @@ export function BlogManager(post) {
   )
 }
 
-export default function Home({ featuredPost }) {
+export default function Home({ featuredPost, tweets }) {
+  //console.log(tweets)
   return (
     <div>
       <Head>
@@ -50,6 +53,18 @@ export default function Home({ featuredPost }) {
                       </div>
                     </Link>
                 </div>
+                <ProjectHighlight tweets={tweets}/>
+                  <Link href="https://twitter.com/daffxcx"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className='group flex gap-x-2 items-center pl-2 mt-6 mb-10 py-2 text-[15px] rounded-sm bg-slate-300/70 dark:bg-slate-800/50'>
+                      <div className='text-slate-600 dark:text-slate-400/80 group-hover:text-black dark:group-hover:text-slate-200/90 tracking-wide font-light'>
+                        View more on Twitter
+                      </div>
+                      <div className=''>
+                       <BsArrowRight className='text-slate-600 dark:text-slate-400/80 group-hover:text-black dark:group-hover:text-slate-200/90'/>
+                      </div>
+                    </Link>
                 <div className='border-t border-t-slate-700'>
                   <div className='pt-10 text-slate-800/90 leading-relaxed dark:text-slate-300/90 font-light tracking-wide'>
                     Wanna leave a <a className='italic'>remarkable™</a> message on this site for future visitors? — You can do so by signing the guestbook for this site!
@@ -92,12 +107,23 @@ export const getStaticProps = async () => {
 */
 
 export async function getStaticProps() {
+  const tweets = await getTweets([
+    '1431124096239157248',
+    '1482499515936817152',
+    '1425270064631083014',
+    '1413288774193205249',
+    '1415205004537827331',
+    '1419277733373247488',
+    '1421423772146364419',
+    '1420686344288817154'
+  ]);
   const limit = 3;
   const featuredPost = [];
   getSortedPostsData().filter((x,index) => ((x.featured === true || x.featured !== undefined ) && index <= limit - 1)).map(x => featuredPost.push(x));
   return {
     props: {
       featuredPost,
+      tweets
     },
   };
 }

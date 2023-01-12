@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import {AiOutlineExclamationCircle, AiOutlineInfoCircle} from "react-icons/ai"
+import {AiOutlineSwap} from 'react-icons/ai'
+import { TwitterLike,TwitterRetweet } from "../public/assets/icons/myIcon";
+import {FaAward} from 'react-icons/fa'
 
 
 function WhatsappContainer({block, children}) {
@@ -242,4 +245,102 @@ const Accordion = (props) =>{
     </div>
     </div>)
 }
-export {WhatsappContainer, Whatsapp, Superchat, HugeQuote, BImage, AlertSign, PaginationBlog, Accordion}
+
+const ProjectHighlight = (data) =>{
+    const handlerAcc = {'Selen Tatsuki':'1413318241804439552', 'Kureiji Ollie':'1328277233492844544', 'Moona Hoshinova':'1234753886520393729', 'Kson':'733990222787018753', 'Rosemi Lovelock':'1413326894435602434', 'Petra Gurin':'1413339084076978179'}
+    const [currTwt,setTwt] = useState([])
+    const [currI, setI] = useState(1)
+    const [currP, setP] = useState({
+        n:'cat.gif',
+        t: 'Booba Catgirl NFT (real)',
+        d : 'A CATGIRL.',
+        tid: '',
+        rt:'-'
+    })
+    const plist = [ { n:'cat.gif', t: 'Booba Catgirl NFT (real)', d : 'A CATGIRL.', tid: '', rt: '-' }, { n:'model1_4.webp', t: 'Kson', tid: '1482499515936817152', rt: 'Kson' }, { n:'moona-1.webp', t: '800k Moona', tid: '1425270064631083014', rt: 'Moona Hoshinova' }, { n:'bae-1.webp', t: 'Hakos Baelz', tid: '1431124096239157248', rt: '-' }, { n:'olliet.webp', t: 'Teacher Ollie', tid: '1413288774193205249', rt: 'Kureiji Ollie' }, { n:'ollie1.webp', t: 'Bday Ollie 🎉', tid: '1415205004537827331', rt: 'Kureiji Ollie' }, { n:'petra.webp', t: 'Flying Petra', tid: '1419277733373247488', rt: 'Petra Gurin' }, { n:'rosemi.webp', t: 'Rosemi 🌺', tid: '1421423772146364419', rt: 'Rosemi Lovelock' }, { n:'obsydia.webp', t: 'Selen and the gang', tid: '1420686344288817154', rt: 'Selen Tatsuki' }, ]
+    function returnProject(){
+        const selectedData = plist[(currI% plist.length)]
+        let filteredData = []
+        selectedData.tid !== '' ? (filteredData = data.tweets.data.filter(data => data.id === selectedData.tid)):('')
+        return [
+            selectedData, filteredData
+            
+            ]
+    }
+    return(
+        <div className="pt-8 border-t border-t-slate-600">
+            <div className="flex justify-between pr-4 pb-2" >
+            <div className="flex items-center gap-x-2 font-light text-sm">
+                <FaAward className={`${currP.rt !== '-' ? "fill-yellow-500 dark:fill-yellow-400":'fill-slate-500 dark:fill-slate-300'} w-4 h-4`}/>
+                <p>Retweeted by <a className={currP.rt !== '-' ? ('underline underline-offset-2'):('pointer-events-none')} href={currP.rt !== '-' ? (`https://twitter.com/intent/user?user_id=${handlerAcc[currP.rt]}`):''}
+                target="_blank"
+                rel="noreferrer noopener">{currP.rt}</a></p>
+            </div>
+            <button onClick={() => {setP(returnProject()[0]), setI(currI + 1), setTwt(returnProject()[1])}}>
+            <AiOutlineSwap className="w-7 h-7 bg-slate-300/50 dark:bg-slate-600/50 p-1 rounded-md"/>
+            </button>
+            </div>
+            <div className="px-2">
+                <div className="w-full">
+                    <div className="grid grid-rows-3 grid-cols-3 space-x-4 sm:space-x-2 md:space-x-0 max-h-[140px]">
+                        <Image className="rounded-md row-span-3 col-span-1 self-center" src={`/assets/img/${currP.n}`} width={140} height={140} alt=""></Image>
+                        <div className="row-span-2 col-span-2 overflow-hidden pt-1">
+                            <div className="">
+                                {currP.t}
+                            </div>
+                            <div className="text-[15px] font-light font-outfit dark:text-slate-400">
+                                    <div className="">
+                                    {currTwt.length > 0 ? (currTwt[0].text.replace(/(?:https):\/\/[\n\S]+/g, '')):currP.d}
+                                    </div>
+                                </div>
+                        </div>
+                        <div className="row-span-1 col-span-2 self-end pb-2 tracking-wide">
+                            <div className="flex text-[14px] font-light gap-x-5">
+                                <div className="flex items-center gap-x-2">
+                                    <TwitterLike className="fill-rose-500 w-4 h-4"/>
+                                    {currTwt.length > 0 ? (currTwt[0].public_metrics.like_count):"---"}
+                                </div>
+                                <div className="flex items-center gap-x-2">
+                                    <TwitterRetweet className="fill-green-600 dark:fill-green-500 w-4 h-4"/>
+                                    {currTwt.length > 0 ? (currTwt[0].public_metrics.retweet_count):"---"}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            {/*<div className="pl-4 flex flex-row gap-x-4">
+                <Image className="rounded-md" src={`/assets/img/${currP.n}`} width={140} height={140} alt=""></Image>
+                <div className="text-[18px] font-medium leading-relaxed tracking-wide">
+                    <div className="flex flex-col min-w-0">
+                        <div className="h-20">
+                            <div className="">
+                                {currP.t}
+                            </div>
+                                <div className="text-[15px] font-light dark:text-slate-300/80">
+                                    <div className="">
+                                    {currTwt.length > 0 ? (currTwt[0].text):currP.d}
+                                    </div>
+                                </div>
+                        </div>
+                        <div>
+                        <div className="flex text-[14px] font-light gap-x-4">
+                            <div className="flex items-center gap-x-2">
+                                <TwitterLike className="fill-rose-500 w-4 h-4"/>
+                                {currTwt.length > 0 ? (currTwt[0].public_metrics.like_count):"---"}
+                            </div>
+                            <div className="flex items-center gap-x-2">
+                                <TwitterRetweet className="fill-green-600 dark:fill-green-500 w-4 h-4"/>
+                                {currTwt.length > 0 ? (currTwt[0].public_metrics.retweet_count):"---"}
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*/}
+
+        </div>
+    )
+}
+export {WhatsappContainer, Whatsapp, Superchat, HugeQuote, BImage, AlertSign, PaginationBlog, Accordion, ProjectHighlight}

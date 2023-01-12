@@ -26,7 +26,7 @@ const Footer = () =>{
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
                         <Link href="/">Home</Link>
                         <Link href="/about">About</Link>
-                        <Link href="/works">Works</Link>
+                        {/*<Link href="/works">Works</Link>*/}
                         </div>
                         <div className='flex flex-col space-y-4 text-slate-500 font-outfit font-light tracking-wide'>
                         <a 

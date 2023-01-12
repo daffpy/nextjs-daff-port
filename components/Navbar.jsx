@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from "react";
 import Link from "next/link";
-import MyIcon from '../public/assets/icons/myIcon.jsx'
-import {AiOutlineMenu} from "react-icons/ai"
+import {MyIcon} from '../public/assets/icons/myIcon.jsx'
+//import {AiOutlineMenu} from "react-icons/ai"
 import { useRouter } from "next/router";
 import ThemeToggler from "./Theme.jsx";
 

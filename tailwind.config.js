@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const {fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -17,9 +18,9 @@ module.exports = {
       fontFamily: {
         space: ['Space Grotesk', 'sans-serif'],
         stussy: ['STUSSY', 'cursive'],
-        htiny:['HEYTINY',"cursive"],
-        outfit:['Outfit', 'sans-serif'],
-        caveat:['Caveat', 'cursive']
+        outfit:['Outfit',...fontFamily.sans],
+        caveat:['Caveat', 'cursive'],
+        inter:['Inter',...fontFamily.sans]
 
       },
       gridTemplateColumns:{
