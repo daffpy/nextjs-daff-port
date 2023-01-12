@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import {WorkPage} from '../../components/page/Works'
+//import {WorkPage} from '../../components/page/Works'
 import Footer from '../../components/Footer'
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <WorkPage/>
+      {/*<WorkPage/>*/}
       <Footer/>
     </div>
   )

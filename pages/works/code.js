@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import {CodePage} from '../../components/page/Works'
+//import {CodePage} from '../../components/page/Works'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <CodePage/>
+      {/*<CodePage/>*/}
     </div>
   )
 }

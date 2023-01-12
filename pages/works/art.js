@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import {ArtPage} from '../../components/page/Works'
+//import {ArtPage} from '../../components/page/Works'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <ArtPage/>
+      {/*<ArtPage/>*/}
     </div>
   )
 }
