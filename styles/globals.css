@@ -20,10 +20,7 @@ html.dark{
 @font-face {
   font-family: "STUSSY";
   src: url("../public/assets/font/StussyScript-Regular.ttf");
-}
-@font-face {
-  font-family: "HEYTINY";
-  src: url("../public/assets/font/HeyTinyBold.ttf");
+  font-display: swap;
 }
 
 a {
