@@ -14,7 +14,7 @@ export default function NowPlaying() {
                     <div className='items-start'>
                     <div className='flex items-center gap-x-2'>
                         <BsSpotify className='self-center text-[#3ab258] dark:text-[#1BD760]'/>
-                        <p className="font-medium text-[17px] text-white">{"Not Playing"}</p>
+                        <p className="font-medium text-[17px] text-slate-900/90 dark:text-white">{"Not Playing"}</p>
                     </div>
                     </div>
                     <div className='flex items-center gap-x-3'>
