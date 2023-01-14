@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { Tooltip } from "@nextui-org/react";
 import Footer from "../Footer.jsx";
 import Image from "next/image"
 import Tracks from '../api/TopTrack.jsx'
@@ -9,22 +8,9 @@ import { siHtml5, siCss3, siJavascript, siPython, siCplusplus,
      siLua, siAseprite, siAdobephotoshop, siKrita, siUnrealengine,
     siUnity, siBlender, siSketchfab,siTypescript,siVisualstudio,siVisualstudiocode,
     siLospec} from 'simple-icons';
-
-import { Pagination} from '@nextui-org/react';
-
-
-import { HTMLIcon, CSSIcon, SFIcon, 
-    JSIcon, PYIcon, CPPIcon, 
-    LuaIcon, AseIcon, PSIcon,
-    LosIcon, KritaIcon, UnityIcon, 
-    VSIcon, BlenderIcon, MixIcon,} from "../../public/assets/icons/aboutIcon";
    
 
 const AboutPage = () => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const handlePageChange = (page) => {
-        setCurrentPage(page);
-    };
     return(
         <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6">
@@ -130,9 +116,9 @@ const AboutPage = () => {
                             </p>
                         </div>
                     </div>
-                    <Tracks currentPage={currentPage} />
+                    <Tracks/>
                     <div className="justify-center flex">
-                    <Pagination className="[&>button]:bg-white dark:[&>button]:bg-[#0E1116] [&>button>span]:text-slate-800 dark:[&>button>span]:text-slate-400  dark:[&>button:hover]:bg-black [&>button:hover]:bg-slate-400/30 [&>p]:bg-white dark:[&>p]:bg-black" total={2} animated={false} initialPage={1} onChange={handlePageChange} css={{$$paginationTextColor : '#FFFFFF', 'font-family': 'Outfit', $$paginationColor:'#0E1116', $$paginationScaleTransform: 1}}/>
+                    {/*<Pagination className="[&>button]:bg-white dark:[&>button]:bg-[#0E1116] [&>button>span]:text-slate-800 dark:[&>button>span]:text-slate-400  dark:[&>button:hover]:bg-black [&>button:hover]:bg-slate-400/30 [&>p]:bg-white dark:[&>p]:bg-black" total={2} animated={false} initialPage={1} onChange={handlePageChange} css={{$$paginationTextColor : '#FFFFFF', 'font-family': 'Outfit', $$paginationColor:'#0E1116', $$paginationScaleTransform: 1}}/>*/}
                     </div>
                 </div>
             </div>
