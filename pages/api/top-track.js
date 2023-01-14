@@ -1,6 +1,6 @@
 import { getTopTracks } from '../../lib/spotify';
 
-export default async (_, res) => {
+export default async (req, res) => {
   const response = await getTopTracks();
   const { items } = await response.json();
 
@@ -11,6 +11,8 @@ export default async (_, res) => {
   }));
 
   //res.setHeader('cache-control','public, s-maxage=86400, stale-while-revalidate=43200')
+
+  res.setHeader('cache-control','public, s-maxage=86400, stale-while-revalidate=43200')
 
   return res.status(200).json({ tracks });
   
