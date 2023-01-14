@@ -1,6 +1,10 @@
 import { getTopTracks } from '../../lib/spotify';
 
-export default async (req, res) => {
+export const config = {
+  runtime: 'experimental-edge'
+};
+
+export default async (req) => {
   const response = await getTopTracks();
   const { items } = await response.json();
 
@@ -12,9 +16,11 @@ export default async (req, res) => {
 
   //res.setHeader('cache-control','public, s-maxage=86400, stale-while-revalidate=43200')
 
-  res.setHeader('cache-control','public, s-maxage=86400, stale-while-revalidate=43200')
-
-  return res.status(200).json({ tracks });
-  
-  
+  return new Response(JSON.stringify({ tracks }), {
+    status: 200,
+    headers: {
+      'content-type': 'application/json',
+      'cache-control': 'public, s-maxage=86400, stale-while-revalidate=43200'
+    }
+  });
 };
