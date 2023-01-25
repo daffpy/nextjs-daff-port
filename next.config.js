@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ['cdn.discordapp.com','i.scdn.co'],
+  modularizeImports:{
+    "simple-icons": {
+      transform: "simple-icons/icons",
+      preventFullImport: true,
+      skipDefaultConversion: true
+    },
   },
   /*
   async redirects() {
