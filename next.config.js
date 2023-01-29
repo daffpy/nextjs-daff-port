@@ -7,6 +7,10 @@ const nextConfig = {
       preventFullImport: true,
       skipDefaultConversion: true
     },
+
+  },
+  images: {
+    domains: ['cdn.discordapp.com','i.scdn.co'],
   },
   /*
   async redirects() {

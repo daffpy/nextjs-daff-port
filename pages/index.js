@@ -65,6 +65,7 @@ export default function Home({ featuredPost, tweets }) {
                        <BsArrowRight className='text-slate-600 dark:text-slate-400/80 group-hover:text-black dark:group-hover:text-slate-200/90'/>
                       </div>
                     </Link>
+                {/*    
                 <div className='border-t border-t-slate-700'>
                   <div className='pt-10 text-slate-800/90 leading-relaxed dark:text-slate-300/90 font-light tracking-wide'>
                     Wanna leave a <a className='italic'>remarkable™</a> message on this site for future visitors? — You can do so by signing the guestbook for this site!
@@ -76,6 +77,7 @@ export default function Home({ featuredPost, tweets }) {
                     </button>
                   </Link>
                 </div>
+                    */}
             </div>
         </div>
         <Footer/>
