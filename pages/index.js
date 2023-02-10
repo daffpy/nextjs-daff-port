@@ -4,8 +4,6 @@ import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import { ProjectHighlight } from '../components/CustomUI'
 import { getSortedPostsData } from '../lib/posts.js';
-import Footer from '../components/Footer';
-import ArrIcon from '../public/assets/icons/rBtnIcon';
 import {BsArrowRight} from 'react-icons/bs'
 import {AiOutlineStar} from "react-icons/ai"
 import { getTweets } from '../lib/twitter'
@@ -80,7 +78,6 @@ export default function Home({ featuredPost, tweets }) {
                     */}
             </div>
         </div>
-        <Footer/>
     </div>
   )
 }

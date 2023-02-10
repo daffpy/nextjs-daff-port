@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer';
 import { getSortedPostsData } from '../../lib/posts';
 import {FiEdit} from 'react-icons/fi'
 
@@ -43,7 +42,6 @@ const Home = ({ allPostsData}) => {
                 </div>
             </div>
         </div>
-        <Footer/>
     </div>
   )
 }

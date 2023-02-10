@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Footer from "../Footer.jsx";
 import Image from "next/image"
 import Tracks from '../api/TopTrack.jsx'
 import profilePic from 'public/picture/profile2023_2.jpg'
@@ -122,7 +121,6 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import GuestbookPage from '../components/page/Guestbook'
-import Footer from '../components/Footer';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
@@ -29,7 +28,6 @@ export default function Home() {
       <GuestbookPage/>
       </div>
       </div>
-      <Footer/>
     </div>
   )
 }
