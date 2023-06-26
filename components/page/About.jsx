@@ -15,7 +15,7 @@ const AboutPage = () => {
         <div className="max-w-[550px] mx-auto mt-[160px]">
             <div className="mx-6">
                 <div className="mt-[110px] text-[44px] font-htiny text-left">
-                    <Image src={profilePic} style={{'borderRadius':'50%'}} width={118} height={118} alt="pp" placeholder="blur" />
+                    <Image src={profilePic} style={{'borderRadius':'50%'}} width={122} height={122} alt="pp" placeholder="blur" />
                     <div className="mt-4  font-outfit font-bold tracking-wide">
                         About me
                     </div>   
