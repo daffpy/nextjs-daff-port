@@ -107,8 +107,8 @@ export const getStaticProps = async () => {
 
 export async function getStaticProps() {
   const tweets = await getTweets([
-    '1431124096239157248',
     '1482499515936817152',
+    '1431124096239157248',
     '1425270064631083014',
     '1413288774193205249',
     '1415205004537827331',
