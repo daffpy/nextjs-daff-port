@@ -251,11 +251,11 @@ const ProjectHighlight = (data) =>{
     const [isLoaded, setLoading] = useState(false)
     const [currI, setI] = useState(1)
     const [currP, setP] = useState({
-        n:'cat.gif',
-        t: 'Booba Catgirl NFT (real)',
-        d : 'A CATGIRL.',
-        tid: '',
-        rt:'-'
+        n:'model1_4.webp',
+        t: 'Kson',
+        d : '-',
+        tid: '1482499515936817152',
+        rt:'Kson'
     })
     const plist = [ { n:'cat.gif', t: 'Booba Catgirl NFT (real)', d : 'A CATGIRL.', tid: '', rt: '-' }, { n:'model1_4.webp', t: 'Kson', tid: '1482499515936817152', rt: 'Kson' }, { n:'moona-1.webp', t: '800k Moona', tid: '1425270064631083014', rt: 'Moona Hoshinova' }, { n:'bae-1.webp', t: 'Hakos Baelz', tid: '1431124096239157248', rt: '-' }, { n:'olliet.webp', t: 'Teacher Ollie', tid: '1413288774193205249', rt: 'Kureiji Ollie' }, { n:'ollie1.webp', t: '700k Ollie 🎉', tid: '1415205004537827331', rt: 'Kureiji Ollie' }, { n:'petra.webp', t: 'Flying Petra', tid: '1419277733373247488', rt: 'Petra Gurin' }, { n:'rosemi.webp', t: 'Rosemi 🌺', tid: '1421423772146364419', rt: 'Rosemi Lovelock' }, { n:'obsydia.webp', t: 'Selen and the gang', tid: '1420686344288817154', rt: 'Selen Tatsuki' }, ]
     function returnProject(){
