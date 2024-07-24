@@ -21,10 +21,10 @@ const AboutPage = () => {
                     </div>   
                     <div className="font-outfit font-light leading-relaxed text-[15px] md:text-[16px] text-slate-800/90 dark:text-slate-300">
                         <p>
-                            Hi, I am Daffa — a senior highschooler born, raised, and living in <b>Jakarta, Indonesia</b>. 
-                            I am a <b>self-taught</b> developer and pixel artist with a huge admiration for unique ideas and designs.
+                            Hi, I am Daffa — a <span className="font-mono tracking-normal text-[14px]">[computer science major]</span> freshman born, raised, and currently living in <span className="font-mono tracking-normal text-[14px]">[Jakarta, Indonesia]</span>. 
+                            I am a self-taught developer and pixel artist with a huge admiration for unique ideas and designs.
                             </p><p className="mt-4">
-                            I'm also very interested in learning anything new, so as a hobby besides coding, i usually <a className="underline  font-normal decoration-pink-500 underline-offset-2">write blogs</a> and <a className="underline  font-normal decoration-pink-500 underline-offset-2">make a pixel art</a> that is usually based around <a className="underline decoration-dashed font-normal decoration-indigo-500 underline-offset-2">Vtubers</a> <a className="text-slate-600 dark:text-slate-400">(Virtual Youtubers)</a> and its communities.
+                            I'm also very interested in learning anything new, so as a hobby besides coding, i usually write blogs and make a pixel art that is usually based around Vtubers (Virtual Youtubers) and its communities.
                         </p>
                     </div>
                     <div className="mt-[65px] text-[32px] text-left font-outfit font-bold tracking-wide">
