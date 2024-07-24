@@ -25,7 +25,7 @@ export function BlogManager(post) {
   )
 }
 
-export default function Home({ featuredPost, tweets }) {
+export default function Home({ featuredPost }) {
   //console.log(tweets)
   return (
     <div>
@@ -51,6 +51,7 @@ export default function Home({ featuredPost, tweets }) {
                       </div>
                     </Link>
                 </div>
+                {/*
                 <ProjectHighlight tweets={tweets}/>
                   <Link href="https://twitter.com/daffxcx"
                         target="_blank"
@@ -63,6 +64,7 @@ export default function Home({ featuredPost, tweets }) {
                        <BsArrowRight className='text-slate-600 dark:text-slate-400/80 group-hover:text-black dark:group-hover:text-slate-200/90'/>
                       </div>
                     </Link>
+                    */}
                 {/*    
                 <div className='border-t border-t-slate-700'>
                   <div className='pt-10 text-slate-800/90 leading-relaxed dark:text-slate-300/90 font-light tracking-wide'>
@@ -106,6 +108,7 @@ export const getStaticProps = async () => {
 */
 
 export async function getStaticProps() {
+  /*
   const tweets = await getTweets([
     '1482499515936817152',
     '1431124096239157248',
@@ -116,13 +119,14 @@ export async function getStaticProps() {
     '1421423772146364419',
     '1420686344288817154'
   ]);
+  */
   const limit = 3;
   const featuredPost = [];
   getSortedPostsData().filter((x,index) => ((x.featured === true || x.featured !== undefined ) && index <= limit - 1)).map(x => featuredPost.push(x));
   return {
     props: {
       featuredPost,
-      tweets
+      //tweets
     },
   };
 }
