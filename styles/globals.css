@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.blog-content{
+  font-size: 10px;
+}
+
 html,
 body {
   padding: 0;

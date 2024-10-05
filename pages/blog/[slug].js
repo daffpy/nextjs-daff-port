@@ -44,10 +44,10 @@ const PostPage = ({frontMatter: { title, ddate, description, tags },slug, mdxSou
                         <p>•</p>
                         <p className='text-[#e60067] text-base'>{readTime}</p>
                     </div>
-                    <h1 className='font-bold pb-6'>{title}</h1>
-                    <h2 className='text-slate-900/80 dark:text-slate-400'>{description}</h2>
-                    <div className='flex gap-x-3 mt-10 text-orange-600 dark:text-yellow-300 justify-between'>
-                        <div className='flex gap-x-3'>{tags.map((tag, key) => <p className='text-base font-light tracking-wide' key={key}>{tag}</p>)}</div>
+                    <h1 className='font-bold pb-6 text-4xl sm:text-5xl md:text-6xl'>{title}</h1>
+                    <h2 className='text-slate-900/80 dark:text-slate-400 text-[17px] sm:text-[18px] md:text-xl'>{description}</h2>
+                    <div className='flex gap-x-3 mt-6 sm:mt-10 text-orange-600 dark:text-yellow-300 justify-between'>
+                        <div className='flex gap-x-3'>{tags.map((tag, key) => <p className='text-[14px] sm:text-base font-light tracking-wide' key={key}>{tag}</p>)}</div>
                     </div>
                 </div>
                 <div className='font-light py-10'>
