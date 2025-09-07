@@ -1,5 +1,5 @@
-import prisma from 'lib/prisma';
-import Guestbook from 'components/GBAuth.jsx';
+import prisma from "../../lib/prisma"
+import Guestbook from '../GBAuth';
 
 export default function GuestbookPage({ fallbackData }) {
   return (

@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import Image from "next/image"
 import Tracks from '../api/TopTrack.jsx'
 //import profilePic from 'public/picture/profile2023_2.jpg'
-import profilePic from '/picture/profile.jpeg';
+import profilePic from "../../public/picture/profile.jpg"
+
 import { Accordion } from "../CustomUI.jsx";
 import { siHtml5, siCss3, siJavascript, siPython, siCplusplus,
      siLua, siAseprite, siAdobephotoshop, siKrita, siUnrealengine,
