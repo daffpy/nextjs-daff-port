@@ -1,9 +1,4 @@
-import React,{useReducer} from "react";
 import Link from "next/link";
-import Image from "next/image";
-import OlliePicGif from "../../public/assets/img/ollie1.gif"
-import OlliePic from "../../public/assets/img/ollie1-static.png"
-import {FaTwitter, FaDiscord} from "react-icons/fa"
 import ArrIcon from "../../public/assets/icons/rBtnIcon";
 import { BsPalette, BsCodeSquare } from "react-icons/bs";
 import Footer from "../Footer";
@@ -62,45 +57,61 @@ const CodePage = () => {
                     <div>
                     <div className="group">
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
-                            vtuberwiki-py
-                        </div>
-                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
-                            <p>
-                                <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
-                                    A wrapper for VirtualYoutuber Fandom API built in Python.  in Python. in Python. in Python.
-                                </a>
-                            </p>
-                            <p className="mt-[10px]">
-                                This package allows you to access Fandom API or scrape a Fandom page either asychronously or sychronously.
-                            </p>
-                            <p className="mt-[10px]">
-                                This is very useful for Discord bot developers that needs a package to grabs information about a certain vtuber.
-                            </p>
-                        </div>
-                        <Link href="https://github.com/daffpy/vtuberwiki-py" target="_blank" rel="noreferrer noopener">
-                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
-                                    View Repository
-                                <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
-                            </button>
-                        </Link>
-                    </div>
-                    <div className="group">
-                        <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             Tycha <span className="not-italic">- Discord Bot</span>
                         </div>
                         <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
-                                    Tycha is a Discord bot which its sole purpose is to fulfill your randomness needs.
+                                    Tycha is my first ever published programming project, it is a multipurpose discord bot. I created Tycha because i felt like back then, there isn't a lot of specific types of bot, therefore i dicded to create one for me & my friends' server
                                 </a>
                             </p>
                             <p className="mt-[10px]">
-                            Most of its features are totally based on randomness and chances, which uses a lot of randomness-based api endpoints and packages to perform.
+                                Tycha could help moderate a discord server and boost engangement at the same time by providing playful and useful feature that has never been added to other bots before, making it grew faster on the bot listing service, namely Top.gg.
                             </p>
                             <p className="mt-[10px] italic">
-                                Note: although the bot is verified by Discord, i chose to discontinue this project as Discord bot development no longer interest me.
+                                Note: although the bot is verified by Discord, i chose to discontinue this project as Discord bot development no longer interest me due to the repeated issue of the discord-py wrapper library.
                             </p>
                         </div>
+                        <Link href="https://github.com/daffpy/tycha" target="_blank" rel="noreferrer noopener">
+                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                    Repository
+                                <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                            </button>
+                        </Link>
+                    </div>    
+                    <div className="group">
+                        <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
+                            vtuberwiki-py
+                        </div>
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
+                            <p>
+                                <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
+                                    I was a huge fan of Vtubers (Virtual Youtubers) and wanted to share their stories and information with other people using Fandom API, but it was very undermaintained therefore i decided to make a wrapper for their API.
+                                </a>
+                            </p>
+                            <p className="mt-[10px]">
+                                VtuberWiki-Py is an Fandom API Wrapper built on Python, exclusively made for Vtuber (Virtual Youtuber) Wiki Fandom. This allows the user to extract the Fandom’s page content smoothly, as raw Fandom API are known to be very unstable and may yield inconsistent API responses format due to it being rarely maintained.
+                            </p>
+                            <p className="mt-[10px]">
+                                This is very useful for Discord bot developers or just developers in general that needs a library to grab information about a certain vtuber asynchronously or synchronously.
+                            </p>
+                        </div>
+                        <div className="flex gap-5">
+                            <Link href="https://github.com/daffpy/vtuberwiki-py" target="_blank" rel="noreferrer noopener">
+                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                    Repository
+                                <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                            </button>
+                        </Link>
+                        <Link href="https://daffa.gitbook.io/vwiki-docs/" target="_blank" rel="noreferrer noopener">
+                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                    Documentation
+                                <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                            </button>
+                        </Link>
+
+                        </div>
+                        
                     </div>
                     <div className="group">
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
@@ -122,105 +133,94 @@ const CodePage = () => {
                     </div>
                     <div className="group">
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
-                            daffxcx.art
+                            satriadaffa.com
                         </div>
                         <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
                             <p>
                                 <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
-                                    Yet another redesign of my old portfolio website, <span className="italic font-bold">daffak.xyz</span> 
+                                    It's this website! a redesign of my old portfolio website, <span className="italic font-bold">daffak.xyz</span> 
                                 </a>
                             </p>
                             <p className="mt-[10px]">
-                                The purpose of this redesign is to learn more about JavaScript framework as my old portfolio website was made in Bootstrap and it gave me a headache since it has a <span className="italic">very</span> bad readibility.
+                                as an expressive person, i love to share my journey to the world, especially sharing stories within a personal blogs, which is why i felt like a personal website would be a perfect and interesting project to try on, as this project was my first dive into React and dynamic sites.
+                            </p>
+                            <p className="mt-[10px]">
+                                This website is consisted of blogs, personal info, and a bit of my personal music taste
+                            </p>
+                        </div>
+                        <Link className="pointer-events-none" href="" target="_blank" rel="noreferrer noopener">
+                            <button className=" opacity-70 hover:opacity-100 group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                    It's this site! not allowing recursion :P
+                               
+                            </button>
+                        </Link>
+                    </div>
+                    <div className="group">
+                        <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
+                            D'AUTOM8N
+                        </div>
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
+                            <p>
+                                <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
+                                    botting on a hyped product drop has been an ongoing issue for me and many other customer due to the unfairness nature of botting, and some companies don't even bother to combat the bots allowing all this mess to happen.
+                                </a>
+                            </p>
+                            <p className="mt-[10px]">
+                                <span className="italic">So how would this product fix the problem?</span> D'AUTOM8N allows user to navigate quickly to the purchase section of the item before it is even displayed on the site, hence giving the user the same chance as the bot. The site will be updated very frequently to keep the item relevance.
                             </p>
                             <p className="mt-[10px] italic">
-                                Note: This is my first time using Next.JS and TailwindCSS and i can't wait to learn more about other framework.
+                                Note: currently it only serves drops from Tokopedia 
                             </p>
                         </div>
+                        <div className="flex gap-5">
+                            <Link href="https://github.com/daffpy/aero-tokped" target="_blank" rel="noreferrer noopener">
+                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                    Repository
+                                <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                            </button>
+                        </Link>
+                        </div>
+            
                     </div>
+                    <div className="group">
+                        <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
+                            Circle
+                        </div>
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
+                            <p>
+                                <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
+                                    ever felt like being shy asking someone to be ur friends in real life? don't worry, thats the reason me and my college team developed Circle.
+                                </a>
+                            </p>
+                            <p className="mt-[10px]">
+                                Circle is a group matching platform for student of Binus University using tinder-like feature to help users find the ideal friend group based on their interest and campus location. The platform gave a safe way for shy people to make friends, as it is exclusively for verified student of Binus University.
+                            </p>
+                            <p className="mt-[10px]">
+                                On Circle, students can find groups based on the preferred interests and even create new groups for a more broader communities. Students could also view the students in that group, making sure that the members in it fit with you and your personality.
+                            </p>
+                        </div>
+                        <div className="flex gap-5">
+                            <Link href="https://github.com/daffpy/circle" target="_blank" rel="noreferrer noopener">
+                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                    Repository
+                                <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                            </button>
+                        </Link>
+                        <Link href="https://circle-if73.vercel.app/" target="_blank" rel="noreferrer noopener">
+                            <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                    Website
+                                <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                            </button>
+                        </Link>
+                        </div>
+                    </div>
+                    
                     </div>
                 </div>
             </div>
-            <Footer/>
 
         </div>
     )
 }
-const ArtPage = () => {
-    const initialState = {}
-    const data = ["moona", "cat", "bae", "kson", "ollie1",'moona2','ollie2']
-    data.forEach(key => initialState[key] = false);
-    function reducer(state, action){
-        switch(action.anim){
-            case 'bae':
-                return {bae : !state.bae};
-            case 'moona':
-                return {moona : !state.moona};
-            case 'moona2':
-                return {moona2 : !state.moona2};
-            case 'cat':
-                return {cat : !state.cat};
-            case 'kson':
-                return {kson : !state.kson};
-            case 'ollie1':
-                return {ollie1 : !state.ollie1};
-            case 'ollie2':
-                return {ollie2 : !state.ollie2};
 
-        }
-    }
-    const [state, dispatch] = useReducer(reducer, initialState)
-
-    return(
-        <div className="max-w-[550px] mx-auto mt-10">
-            <div className="mx-6">
-                <div className="mt-[110px] text-[44px] font-outfit text-left">
-                    <div className="font-bold">
-                        Artworks
-                    </div>
-                    <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
-                        <p>
-                            Here is a collection from some of my finest artworks! i hope this will give you a rough idea of my pixel art style.
-                        </p>
-                        <p className="mt-[20px]">
-                            I love making pixel art and animations and i will keep making them, maybe this will give a fellow artists a reference. Any suggestion or tips is appreciated.
-                        </p>
-                        <p className="mt-[20px]">
-                        Okay enough talking, please enjoy your visit here!
-                        </p>
-                        <p className="mt-[40px] italic">
-                        Tip: you can enlarge & view the animation if you click/hover on the image
-                        </p>
-                    </div>
-                    <div className="mt-[50px]">
-                    <div className="grid grid-cols-2 justify-items-center">
-                        <div className="group">
-                            <Image onMouseOver={() => dispatch({anim: 'bae'})} onMouseOut={() => dispatch({anim: 'bae'})} className="rounded-lg scale-[0.75] group-hover:scale-[1] ease-in-out duration-300" src={state.bae ?'/assets/img/bae-1.gif':'/assets/img/bae-1-static.png'} width={180} height={180} alt='baelz'/>
-                        </div>
-                        <div className="group">
-                            <Image onMouseOver={() => dispatch({anim: 'kson'})} onMouseOut={() => dispatch({anim: 'kson'})} className="rounded-lg scale-[0.75] group-hover:scale-[1] ease-in-out duration-300" src={state.kson ?'/assets/img/model1_4.gif':'/assets/img/model1_4-static.png'} width={180} height={180} alt='kson'/>
-                        </div>
-                        <div className="group">
-                            <Image onMouseOver={() => dispatch({anim: 'cat'})} onMouseOut={() => dispatch({anim: 'cat'})} className="rounded-lg scale-[0.75] group-hover:scale-[1] ease-in-out duration-300" src={state.cat ?'/assets/img/cat.gif':'/assets/img/cat-static.png'} width={180} height={180} alt='nft cat'/>
-                        </div>
-                        <div className="group">
-                            <Image onMouseOver={() => dispatch({anim: 'moona'})} onMouseOut={() => dispatch({anim: 'moona'})} className="rounded-lg scale-[0.75] group-hover:scale-[1] ease-in-out duration-300" src={state.moona ?'/assets/img/moona-1.gif':'/assets/img/moona-1-static.png'} width={180} height={180} alt='moona'/>
-                        </div>
-                        <div className="group">
-                            <Image onMouseOver={() => dispatch({anim: 'ollie2'})} onMouseOut={() => dispatch({anim: 'ollie2'})} className="rounded-lg scale-[0.75] group-hover:scale-[1] ease-in-out duration-300" src={state.ollie2 ?'/assets/img/olliet-3-4-3.gif':'/assets/img/olliet-3-4-3-static.png'} width={180} height={180} alt='ollie teacher'/>
-                        </div>
-                        <div className="group">
-                            <Image onMouseOver={() => dispatch({anim: 'moona2'})} onMouseOut={() => dispatch({anim: 'moona2'})} className="rounded-lg scale-[0.75] group-hover:scale-[1] ease-in-out duration-300" src={state.moona2 ?'/assets/img/MoonaRun3.gif':'/assets/img/MoonaRun3-static.png'} width={180} height={180} alt='moona'/>
-                        </div>
-                        <div className="group col-span-2">
-                            <Image onMouseOver={() => dispatch({anim: 'ollie1'})} onMouseOut={() => dispatch({anim: 'ollie1'})} className="w-[250px] h-auto rounded-lg scale-[0.75] group-hover:scale-[1] ease-in-out duration-300" src={state.ollie1 ? OlliePicGif:OlliePic} alt='ollie'/>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <Footer/>
-        </div>
-    )
-}
-export {WorkPage, CodePage, ArtPage}
+export {WorkPage, CodePage}
