@@ -53,6 +53,10 @@ const CodePage = () => {
                         <p>
                             Here is a few things/projects that i've worked on during my programming journey:
                         </p>
+                        <br/>
+                        <p>
+                            you can find a detailed summary of the projects' <Link className="italic hover:underline text-[#e60067]" href="/portfolio.pdf">portfolio here</Link>
+                        </p>
                     </div>
                     <div>
                     <div className="group">
