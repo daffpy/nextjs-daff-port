@@ -59,7 +59,7 @@ const CodePage = () => {
                         </p>
                         <br/>
                         <p>
-                            And here is my <Link className="italic hover:underline text-[#e60067]" href="/portfolio.pdf">resume</Link> too if you ever need it.
+                            And here is my <Link className="italic hover:underline text-[#e60067]" href="/cv.pdf">resume</Link> too if you ever need it.
                         </p>
                     </div>
                     <div>
