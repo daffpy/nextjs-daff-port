@@ -58,7 +58,7 @@ const Navbar = () => {
                             /*(scrollDir == 'top' ? '' : '') +*/
                             (scrollDir == 'down' ? ' translate-y-[-100%]' : '') + 
                             (scrollDir == 'up' ? ' translate-y-[0%] pt-0': '')}>   
-                <div className={"ml-2 sm:ml-3 md:ml-0 flex justify-between items-center bg-white/50 px-1 pb-1 dark:bg-[#0E1116]/50"
+                <div className={"ml-2 sm:ml-3 md:ml-0 flex justify-between items-center bg-transparent px-1 pb-1"
                                 + ((scrollDir == 'top' ? ' pt-5' : ''))}>
                     {currentPath === '/' ? (
                         <div className="flex mt-1">
