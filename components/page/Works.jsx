@@ -65,6 +65,38 @@ const CodePage = () => {
                     <div>
                     <div className="group">
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
+                            InstaDraw
+                        </div>
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
+                            <p>
+                                <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
+                                    InstaDraw was created due to the inability of me to draw image beautifully on instagram newest doodle update.
+                                </a>
+                            </p>
+                            <p className="mt-[10px]">
+                                InstaDraw allows users to draw any of the preferred custom image into Instagram's doodle canvas automatically by utilizing OpenCV's contouring and thresholding method and PyAutoGUI cursor input automation
+                            </p>
+                            <p className="mt-[10px] italic">
+                                Note: this project went viral and reached 2.1M views on TikTok , as it was the pioneer of every other image tracing method on Instagram doodle.
+                            </p>
+                        </div>
+                        <div className="flex gap-5">
+                            <Link href="https://github.com/daffpy/instadraw" target="_blank" rel="noreferrer noopener">
+                                <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                        Repository
+                                    <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                                </button>
+                            </Link>
+                            <Link href="https://vt.tiktok.com/ZSy3UjAhU/" target="_blank" rel="noreferrer noopener">
+                                <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                        TikTok
+                                    <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="group">
+                        <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             Tycha <span className="not-italic">- Discord Bot</span>
                         </div>
                         <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
