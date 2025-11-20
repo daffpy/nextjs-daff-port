@@ -97,6 +97,38 @@ const CodePage = () => {
                     </div>
                     <div className="group">
                         <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
+                            Rejecti-no
+                        </div>
+                        <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
+                            <p>
+                                <a className="marker marker--ul group-hover:bg-[length:100%_100%]">
+                                    Rejecti-no <span className="italic">(pun from the word "rejection")</span> is a fun games website that help users to confess their love to someone while making it funny and enjoyable for both parties.
+                                </a>
+                            </p>
+                            <p className="mt-[10px]">
+                                Rejecti-no consisted of multiple unique level that forces the user to overcome certain challenges if they decided to reject the person who confessed, allowing more complex and intimate feeling for the one being confessed to
+                            </p>
+                            <p className="mt-[10px] italic">
+                                Note: more levels will be added later on, as i strive to only use unique puzzle and unexpected way of playing.
+                            </p>
+                        </div>
+                        <div className="flex gap-5">
+                            <Link href="https://github.com/daffpy/rejectino" target="_blank" rel="noreferrer noopener">
+                                <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                        Repository
+                                    <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                                </button>
+                            </Link>
+                            <Link href="https://rejectino-95zx.vercel.app/" target="_blank" rel="noreferrer noopener">
+                                <button className=" group/btn font-space flex rounded-full hover:rounded-l-lg dark:bg-white bg-slate-900/90 px-5 pt-2 pb-2 mt-[40px] text-[14px] text-white dark:text-[#1d1d1e] hover:pr-[20px] ease-out duration-300">
+                                        Website
+                                    <ArrIcon className='stroke-[1.5px] stroke-white dark:stroke-[#1d1d1e] mt-[2px] ml-3 ease-in duration-200 group-hover/btn:scale-x-[1.5] group-hover/btn:ml-4' />
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="group">
+                        <div className="inline-block mt-[65px] text-[30px] italic font-space font-bold text-left marker marker--text group-hover:bg-[length:100%_100%]">
                             Tycha <span className="not-italic">- Discord Bot</span>
                         </div>
                         <div className="font-outfit font-light tracking-wide text-[14px] md:text-[15px] text-slate-600 dark:text-[#cbd5e0]">
