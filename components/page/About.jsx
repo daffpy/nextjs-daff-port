@@ -9,6 +9,7 @@ import { siHtml5, siCss3, siJavascript, siPython, siCplusplus,
      siLua, siAseprite, siAdobephotoshop, siKrita, siUnrealengine,
     siUnity, siBlender, siSketchfab,siTypescript,siVisualstudio,siVisualstudiocode,
     siLospec} from 'simple-icons';
+import Link from "next/link";
    
 
 const AboutPage = () => {
@@ -37,72 +38,12 @@ const AboutPage = () => {
                                 I love learning a broad range of topics, therefore it also increases my knowledgebases and capabilities when met with a new challenges in the future.
                             </p>
                             <p className="mt-4">
-                                So, here is a highlight of some things that i've used on (or for) my projects:
+                                So, here is a highlight of some things that i've used on (or for) my projects: <Link className="italic hover:not-italic text-[#e60067] opacity-70 hover:opacity-100" href="/projects">[click here to view my projects]</Link>
                             </p>
                         </div>
                         <Accordion category={["Web Development","System Language", "Scripting Languages"]} title="Languages" icon={[[siHtml5, siCss3, siJavascript,siTypescript ],[siCplusplus],[siLua,siPython]]}/>
                         <Accordion category={["Pixel Art","Digital Art"]} title="Artistry" icon={[[siAseprite,siLospec],[siAdobephotoshop,siKrita]]}/>
                         <Accordion category={["Game Engine","3D Modelling", "Development Tools"]} title="Game Development" icon={[[siUnrealengine, siUnity],[siBlender,siSketchfab],[siVisualstudio,siVisualstudiocode]]}/>
-                        {/*(<div className="text-[18px] text-slate-800 dark:text-white font-[STUSSY] tracking-wide font-bold mt-8">
-                            languages
-                        </div>
-                        <div className="dark:fill-white fill-slate-800 grid grid-cols-6 px-3 py-3 bg-[url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=FF3690)] dark:bg-[url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=E60067)] max-w-[300px]">
-                            <Tooltip content="HTML" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <HTMLIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="CSS" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <CSSIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="JavaScript" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <JSIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Python" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <PYIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="C++ (Competitive Programming)" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <CPPIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Lua (Learning)" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <LuaIcon width={26}/>
-                            </Tooltip>
-                        </div>
-                        <div className="text-[18px] font-[STUSSY] text-slate-800 dark:text-white tracking-wide font-bold mt-6 c">
-                            Art
-                        </div>
-                        <div className="max-w-[210px] dark:fill-white fill-slate-800 grid grid-cols-4 px-3 py-3 bg-[url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=FF3690)] dark:bg-[url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=E60067)]">
-                            <Tooltip placement="topStart" content="Aseprite (Pixel Art)" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <AseIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Photoshop" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <PSIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Krita" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <KritaIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Lospec (Pallette)" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <LosIcon width={26}/>
-                            </Tooltip>
-                        </div>
-                        <div className="text-[18px] font-[STUSSY] text-slate-800 dark:text-white tracking-wide font-bold mt-6 ">
-                            Game Development
-                        </div>
-                        <div className=" max-w-[260px] dark:fill-white fill-slate-800 grid grid-cols-5 px-3 py-3 bg-[url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=FF3690)] dark:bg-[url(//s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=E60067)]">
-                            <Tooltip placement="topStart" content="Unity (2D & 3D)" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <UnityIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Visual Studio" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <VSIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Blender" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <BlenderIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Sketchfab (3D Model)" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <SFIcon width={26}/>
-                            </Tooltip>
-                            <Tooltip content="Mixamo (Animation)" css={{$$tooltipTextColor : '#FFFFFF', 'font-family': 'Space Grotesk', $$tooltipColor:'black'}}>
-                                <MixIcon width={26}/>
-                            </Tooltip>
-                        </div>)*/}
                     </div>
                     <div className="mt-[45px] text-[32px] text-left font-outfit font-bold tracking-wide">
                         Music taste
